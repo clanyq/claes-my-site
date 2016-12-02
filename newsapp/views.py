@@ -6,7 +6,7 @@ from newsapp.forms import NewsForm
 
 def index(request):
     latest_press_list = News.objects.order_by('-pubdate')[:5]
-    output = ', '.join([p.title for p in latest_press_list])
+    output = ' - '.join([p.title for p in latest_press_list])
     return HttpResponse(output)
 
 def news_form(request):

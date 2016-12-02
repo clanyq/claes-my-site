@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
+
 from newsapp import views
 from pressapp import views
 
@@ -24,6 +25,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^newsapp/', include('newsapp.urls')),
     url(r'^pressapp/', include('pressapp.urls')),
+    url(r'^$', views.index, name='index'),
 ]
 
 if settings.DEBUG:
