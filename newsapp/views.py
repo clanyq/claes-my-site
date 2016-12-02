@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from newsapp.models import News
 from newsapp.forms import NewsForm
 
 def index(request):
-    return HttpResponse("Testwer")
+    latest_press_list = News.objects.order_by('-pubdate')[:5]
+    output = ', '.join([p.title for p in latest_press_list])
+    return HttpResponse(output)
 
 def news_form(request):
 
