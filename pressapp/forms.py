@@ -10,5 +10,5 @@ class PressForm(forms.ModelForm):
 
     class Meta:
         model = Press
-        fields = ('title', 'url', 'source', 'pubdata')
+        fields = ('title', 'url', 'source', 'pubdate')
 

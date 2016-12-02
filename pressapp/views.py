@@ -4,6 +4,9 @@ from django.http import HttpResponse
 from pressapp.forms import PressForm
 from pressapp.models import Press
 
+def index(request):
+    return render(request, 'index.html')
+
 # def index(request):
 #     # Query the database for a list of ALL categories currently stored.
 #     # Order the categories by no. likes in descending order.
@@ -20,13 +23,6 @@ def press_form(request):
 
     form = PressForm()
 
-    if request.method == 'POST':
-        form = PressForm(request.POST)
-        if form.is_valid():
-            form.save(commit=True)
-        else:
-            print(form.errors)
-
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'base.html', {'form': form})
 
 
