@@ -27,6 +27,7 @@ def press_form(request):
         form = PressForm(request.POST)
         if form.is_valid():
             form.save(commit=True)
+            form = PressForm()
         else:
             print(form.errors)
 
