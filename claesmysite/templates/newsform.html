@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <!--<title>{% block title %}{% endblock %}</title>-->
-        <title>Press Form</title>
+        <title>News Form</title>
         {% compress css %}
         <link rel="stylesheet" href="{% static 'style/main.scss' %}" type="text/x-scss" media="screen">
         {% endcompress %}
@@ -13,7 +13,7 @@
 
     <body class="{% block bodyclass %}{% endblock %}">
         {% block content %}{% endblock %}
-        <form action="/pressapp/pressform/" method="post">
+        <form action="/newsapp/newsform/" method="post">
             {% csrf_token %}
             {{ form }}
             <input type="submit" value="Submit" />
