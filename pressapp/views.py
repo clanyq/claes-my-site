@@ -23,6 +23,13 @@ def press_form(request):
 
     form = PressForm()
 
-    return render(request, 'base.html', {'form': form})
+    if request.method == 'POST':
+        form = PressForm(request.POST)
+        if form.is_valid():
+            form.save(commit=True)
+        else:
+            print(form.errors)
+
+    return render(request, 'pressform.html', {'form': form})
 
 
