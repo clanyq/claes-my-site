@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'claesmysite',
     'compressor',
+    'newsapp',
+    'pressapp',
 ]
 
 MIDDLEWARE = [
