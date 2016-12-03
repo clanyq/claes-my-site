@@ -3,5 +3,5 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class PressappConfig(AppConfig):
-    name = 'pressapp'
+class FeedappConfig(AppConfig):
+    name = 'feedapp'

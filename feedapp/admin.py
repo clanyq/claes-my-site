@@ -1,5 +1,6 @@
 from django.contrib import admin
-from newsapp.models import News
+from feedapp.models import News, Press
 # Register your models here.
 
 admin.site.register(News)
+admin.site.register(Press)
