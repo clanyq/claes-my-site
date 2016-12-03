@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -21,3 +22,10 @@ class Press(models.Model):
 
     def __str__(self):
         return(self.title)
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User)
+
+    def __str__(self):
+        return (self.user)

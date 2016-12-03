@@ -13,6 +13,7 @@
 
     <body class="{% block bodyclass %}{% endblock %}">
         {% block content %}{% endblock %}
+
         <form action="/feedapp/pressform/" method="post">
             {% csrf_token %}
             {{ form }}
