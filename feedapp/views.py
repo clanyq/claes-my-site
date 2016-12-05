@@ -1,6 +1,7 @@
 from django.shortcuts import render, render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
 from django.conf import settings
@@ -10,11 +11,7 @@ from django.core.files.storage import FileSystemStorage
 from feedapp.models import News, Press, Document
 from feedapp.forms import NewsForm, PressForm, DocumentForm
 
-
-
-
-
-
+@login_required()
 def news_form(request):
     newsform = NewsForm()
 
@@ -38,7 +35,7 @@ def index(request):
 
     return HttpResponse(output_news + "---------"+ output_press)
 
-
+@login_required()
 def press_form(request):
     pressform = PressForm()
 
@@ -94,8 +91,8 @@ def user_login(request):
         # blank dictionary object...
         return render(request, 'login.html', {})
 
-
-def list(request):
+@login_required()
+def pic_upload(request):
     # Handle file upload
     if request.method == 'POST':
         form = DocumentForm(request.POST, request.FILES)
