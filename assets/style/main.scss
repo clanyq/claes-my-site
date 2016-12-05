@@ -1,0 +1,43 @@
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('http://fonts.googleapis.com/css?family=PT+Sans');
+
+$bg-purple: #5F308C;
+$bg-blue: #255897;
+$button-green: #01AB6C;
+
+body {
+    background-image: linear-gradient($bg-blue, $bg-purple);
+    background-size: 100% 65%;
+    background-repeat: no-repeat;
+}
+
+button {
+
+    background-color: $button-green;
+    color: white;
+    -moz-border-radius: 10%;
+    -webkit-border-radius: 10%;
+    border-radius: 10%;
+    width: 15%;
+    height: 5%;
+    font-size: 110%;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 45%;
+    left: 42.5%;
+}
+
+.news {
+    position: absolute;
+    top: 45%;
+    left: 42.5%;
+    font-size: 110%;
+}
+
+.press {
+    position: absolute;
+    top: 70;
+    left: 42.5%;
+    font-size: 110%;
+}

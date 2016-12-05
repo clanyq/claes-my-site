@@ -33,17 +33,22 @@ def index(request):
     latest_news_list = News.objects.order_by('-pubdate')[:5]
     output_news = ', '.join([p.title for p in latest_news_list])
 
-    return HttpResponse(output_news + "---------"+ output_press)
+    return render(request, 'index.html', {'output_press': output_press, 'output_news': output_news})
 
 @login_required()
 def press_form(request):
     pressform = PressForm()
+    newsform = NewsForm()
 
     if request.method == 'POST':
         pressform = PressForm(request.POST)
+        newsform = NewsForm(request.POST)
         if pressform.is_valid():
             pressform.save(commit=True)
             pressform = PressForm()
+        elif newsform.is_valid():
+            newsform.save(commit=True)
+            newsform = PressForm()
         else:
             print(pressform.errors)
 
@@ -52,44 +57,25 @@ def press_form(request):
 
 def user_login(request):
 
-    # If the request is a HTTP POST, try to pull out the relevant information.
     if request.method == 'POST':
-        # Gather the username and password provided by the user.
-        # This information is obtained from the login form.
-                # We use request.POST.get('<variable>') as opposed to request.POST['<variable>'],
-                # because the request.POST.get('<variable>') returns None, if the value does not exist,
-                # while the request.POST['<variable>'] will raise key error exception
+
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        # Use Django's machinery to attempt to see if the username/password
-        # combination is valid - a User object is returned if it is.
         user = authenticate(username=username, password=password)
 
-        # If we have a User object, the details are correct.
-        # If None (Python's way of representing the absence of a value), no user
-        # with matching credentials was found.
         if user:
-            # Is the account active? It could have been disabled.
             if user.is_active:
-                # If the account is valid and active, we can log the user in.
-                # We'll send the user back to the homepage.
                 login(request, user)
-                return HttpResponseRedirect('/feedapp/pressform')
+                return HttpResponseRedirect('/feedapp/admin')
             else:
-                # An inactive account was used - no logging in!
                 return HttpResponse("Your account is disabled.")
         else:
-            # Bad login details were provided. So we can't log the user in.
-            print "Invalid login details: {0}, {1}".format(username, password)
+
             return HttpResponse("Invalid login details supplied.")
 
-    # The request is not a HTTP POST, so display the login form.
-    # This scenario would most likely be a HTTP GET.
     else:
-        # No context variables to pass to the template system, hence the
-        # blank dictionary object...
-        return render(request, 'login.html', {})
+        return render(request, 'login.html')
 
 @login_required()
 def pic_upload(request):
@@ -103,7 +89,6 @@ def pic_upload(request):
 
     else:
         form = DocumentForm()
-
 
     return render(request, 'pic_upload.html',{'form': form},
 

@@ -19,6 +19,11 @@
             {{ pressform }}
             <input type="submit" value="Submit" />
         </form>
+        <form action="/feedapp/pressform/" method="post">
+            {% csrf_token %}
+            {{ newsform }}
+            <input type="submit" value="Submit" />
+        </form>
         {% compress js %}
         <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
         {% endcompress %}
