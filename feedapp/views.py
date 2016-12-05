@@ -102,15 +102,17 @@ def pic_upload(request):
             form = DocumentForm()
 
     else:
-        form = DocumentForm() # A empty, unbound form
+        form = DocumentForm()
 
 
-
-    # Render list page with the documents and the form
     return render(request, 'pic_upload.html',{'form': form},
 
     )
 
+
+@login_required()
+def admin_site(request):
+    return render(request, 'admin.html')
 
 
 
