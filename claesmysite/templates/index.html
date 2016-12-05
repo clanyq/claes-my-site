@@ -6,12 +6,13 @@
     <title>TEstt</title>
 </head>
 <body>
-    <button name="buttonstart">GET STARTED</button>
+    <button class="buttonstart">GET STARTED</button>
     <div class="press">
+        <a href="/feedapp/press">view all</a>
         <ul>
     {% for press in output_press %}
-        <ul><a href="{{press.url}}">{{ press.title }}</a></ul>
-        <ul>{{ press.source }} {{ press.pubdate }}</ul>
+        <li><a href="{{press.url}}">{{ press.title }}</a></li>
+        <li>{{ press.source }} {{ press.pubdate }}</li>
 
 
 {% endfor %}
@@ -19,11 +20,11 @@
     </div>
 
 <div class="news">
-
+    <a href="/feedapp/news">view all</a>
     <ul>
 {% for news in output_news %}
-        <ul><a href="http://google.com">{{ news.title }}</a></ul>
-        <ul>{{ news.pubdate }}</ul>
+        <li><a href="http://google.com">{{ news.title }}</a></li>
+        <li>{{ news.pubdate }}</li>
 {% endfor %}
 </ul>
     </div>

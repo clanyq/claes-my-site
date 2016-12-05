@@ -99,6 +99,16 @@ def pic_upload(request):
 def admin_site(request):
     return render(request, 'admin.html')
 
+def news(request):
+    news = News.objects.order_by('-pubdate')[:5]
+
+    return render(request, 'news.html', {'news': news})
+
+def press(request):
+    press = Press.objects.order_by('-pubdate')[:5]
+
+    return render(request, 'press.html', {'press': press})
+
 
 
 
