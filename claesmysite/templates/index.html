@@ -7,8 +7,24 @@
 </head>
 <body>
     <button name="buttonstart">GET STARTED</button>
-    <div class="press">{{output_press}}</div>
-    <div class="news">{{output_news}}</div>
+    <div class="press">
+    {% for press in output_press %}
+        <ul>{{ press.title }}</ul>
+        <ul>{{ press.source }}</ul>
+        <ul>{{ press.pubdate }}</ul>
+
+{% endfor %}
+    </div>
+
+<div class="news">
+
+    <ul>
+{% for news in output_news %}
+        <ul>{{ news.title }}</ul>
+        <ul>{{ news.pubdate }}</ul>
+{% endfor %}
+</ul>
+    </div>
 </body>
 </html>
 {% endblock %}

@@ -31,9 +31,9 @@ def index(request):
     output_press = ', '.join([p.title for p in latest_press_list])
 
     latest_news_list = News.objects.order_by('-pubdate')[:5]
-    output_news = ', '.join([p.title for p in latest_news_list])
 
-    return render(request, 'index.html', {'output_press': output_press, 'output_news': output_news})
+
+    return render(request, 'index.html', {'output_press': latest_press_list, 'output_news': latest_news_list})
 
 @login_required()
 def press_form(request):
