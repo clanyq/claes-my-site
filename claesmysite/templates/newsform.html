@@ -15,7 +15,7 @@
         {% block content %}{% endblock %}
         <form action="/feedapp/newsform/" method="post">
             {% csrf_token %}
-            {{ form }}
+            {{ newsform }}
             <input type="submit" value="Submit" />
         </form>
         {% compress js %}

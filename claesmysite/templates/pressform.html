@@ -16,7 +16,7 @@
 
         <form action="/feedapp/pressform/" method="post">
             {% csrf_token %}
-            {{ form }}
+            {{ pressform }}
             <input type="submit" value="Submit" />
         </form>
         {% compress js %}

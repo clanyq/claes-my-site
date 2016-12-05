@@ -3,7 +3,8 @@ import datetime
 from django import forms
 from django.contrib.auth.models import User
 
-from feedapp.models import News, Press, UserProfile
+
+from feedapp.models import News, Press, UserProfile, Document
 
 
 class NewsForm(forms.ModelForm):
@@ -39,3 +40,11 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('user',)
+
+
+class DocumentForm(forms.Form):
+    docfile = forms.FileField(label='Select a picture',)
+
+    class Meta:
+        model = Document
+        fields = ('docfile')
