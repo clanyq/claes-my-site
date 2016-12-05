@@ -8,19 +8,21 @@
 <body>
     <button name="buttonstart">GET STARTED</button>
     <div class="press">
+        <ul>
     {% for press in output_press %}
-        <ul>{{ press.title }}</ul>
-        <ul>{{ press.source }}</ul>
-        <ul>{{ press.pubdate }}</ul>
+        <ul><a href="{{press.url}}">{{ press.title }}</a></ul>
+        <ul>{{ press.source }} {{ press.pubdate }}</ul>
+
 
 {% endfor %}
+    </ul>
     </div>
 
 <div class="news">
 
     <ul>
 {% for news in output_news %}
-        <ul>{{ news.title }}</ul>
+        <ul><a href="http://google.com">{{ news.title }}</a></ul>
         <ul>{{ news.pubdate }}</ul>
 {% endfor %}
 </ul>

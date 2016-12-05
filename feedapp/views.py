@@ -27,10 +27,10 @@ def news_form(request):
 
 
 def index(request):
-    latest_press_list = Press.objects.order_by('-pubdate')[:5]
+    latest_press_list = Press.objects.order_by('-pubdate')[:3]
     output_press = ', '.join([p.title for p in latest_press_list])
 
-    latest_news_list = News.objects.order_by('-pubdate')[:5]
+    latest_news_list = News.objects.order_by('-pubdate')[:3]
 
 
     return render(request, 'index.html', {'output_press': latest_press_list, 'output_news': latest_news_list})
