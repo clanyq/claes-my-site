@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+{% load static %}
 {% block content %}
 <html lang="en">
 <head>
@@ -6,27 +8,34 @@
     <title>TEstt</title>
 </head>
 <body>
+    <img src="{% static "images/logo.png" %}">
     <button class="buttonstart">GET STARTED</button>
+
     <div class="press">
-        <a href="/press">view all</a>
+        <h3 class="view_all">Press</h3>
+        <a class="view_all" href="/press">view all</a>
         <ul>
-    {% for press in output_press %}
-        <li><a href="{{press.url}}">{{ press.title }}</a></li>
-        <li>{{ press.source }} {{ press.pubdate }}</li>
+        {% for press in output_press %}
+            <li>
+                <a href="{{press.url}}">{{press.title}}</a>
+                <time>{{press.source}} - {{press.pubdate}}</time>
+            </li>
 
-
-{% endfor %}
-    </ul>
+            {% endfor %}
+        </ul>
     </div>
 
-<div class="news">
-    <a href="/news">view all</a>
-    <ul>
-{% for news in output_news %}
-        <li><a href="/news/{{news.slug}}">{{ news.title }}</a></li>
-        <li>{{ news.pubdate }}</li>
-{% endfor %}
-</ul>
+    <div class="news">
+        <h3 class="view_all">News</h3>
+        <a class="view_all"href="/news">view all</a>
+        <ul>
+        {% for news in output_news %}
+            <li>
+                <a href="/news/{{news.slug}}">{{ news.title }}</a>
+                <time>{{ news.pubdate }}</time>
+            </li>
+        {% endfor %}
+        </ul>
     </div>
 </body>
 </html>

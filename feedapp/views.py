@@ -44,7 +44,6 @@ def press_form(request):
         if pressform.is_valid():
             pressform.save(commit=True)
             pressform = PressForm()
-
         else:
             print(pressform.errors)
 

@@ -9,8 +9,8 @@
  <ul>
 {% for item in news %}
      <li><a href="{{item.slug}}">{{ item.title }}</a></li>
-    <li>{{ item.pubdate }}</li>
-     <li>{{ item.body }}</li>
+     <li>{{ item.pubdate }}</li>
+     <li>{{ item.body|linebreaks }}</li>
 {% endfor %}
 </ul>
 

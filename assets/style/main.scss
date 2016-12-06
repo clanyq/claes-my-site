@@ -6,10 +6,17 @@ $bg-blue: #255897;
 $button-green: #01AB6C;
 
 body {
+    min-width: 800px;
     background-image: linear-gradient($bg-blue, $bg-purple);
     background-size: 100% 65%;
     background-repeat: no-repeat;
+    img{
+        width: 10%;
+        }
+
+
 }
+
 
 .buttonstart {
 
@@ -29,15 +36,76 @@ body {
 }
 
 .news {
+    display: inline-block;
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 60%;
-    font-size: 110%;
+    font-size: 100%;
+    .view_all {
+        display: inline-block;
+        margin-right: 50px;
+        text-decoration: none;
+
+
+    }
+    ul{
+        font-size: 70%;
+        font-weight: bold;
+        list-style-type: none;
+        padding-left: 0;
+        border-top: 1px groove grey;
+
+        li{
+            list-style-type: none;
+            list-decoration: none;
+
+            a {
+                font-family: "Titillium Web", sans-serif;
+                font-size: 140%;
+                text-decoration: none;
+                display: block;
+            }
+            time {
+                font-weight: normal;
+                font-size: 100%;
+            }
+        }
+    }
 }
 
 .press {
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 20%;
-    font-size: 110%;
+    font-size: 100%;
+    .view_all {
+        display: inline-block;
+        margin-right: 50px;
+        text-decoration: none;
+
+
+    }
+    ul{
+        font-size: 70%;
+        font-weight: bold;
+        list-style-type: none;
+        padding-left: 0;
+        border-top: 1px groove grey;
+
+        li{
+            list-style-type: none;
+            list-decoration: none;
+
+            a {
+                font-family: "Titillium Web", sans-serif;
+                font-size: 140%;
+                text-decoration: none;
+                display: block;
+            }
+            time {
+                font-weight: normal;
+                font-size: 100%;
+            }
+        }
+    }
 }
