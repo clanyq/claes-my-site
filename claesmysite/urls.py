@@ -23,7 +23,7 @@ from feedapp import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
-    url(r'^feedapp/', include('feedapp.urls')),
+    url(r'^', include('feedapp.urls')),
 ]
 
 if settings.DEBUG:

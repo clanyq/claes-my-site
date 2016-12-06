@@ -8,7 +8,7 @@
 <body>
     <button class="buttonstart">GET STARTED</button>
     <div class="press">
-        <a href="/feedapp/press">view all</a>
+        <a href="/press">view all</a>
         <ul>
     {% for press in output_press %}
         <li><a href="{{press.url}}">{{ press.title }}</a></li>
@@ -20,7 +20,7 @@
     </div>
 
 <div class="news">
-    <a href="/feedapp/news">view all</a>
+    <a href="/news">view all</a>
     <ul>
 {% for news in output_news %}
         <li><a href="http://google.com">{{ news.title }}</a></li>

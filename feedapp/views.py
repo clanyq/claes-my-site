@@ -67,7 +67,7 @@ def user_login(request):
         if user:
             if user.is_active:
                 login(request, user)
-                return HttpResponseRedirect('/feedapp/admin')
+                return HttpResponseRedirect('/input')
             else:
                 return HttpResponse("Your account is disabled.")
         else:
@@ -97,7 +97,7 @@ def pic_upload(request):
 
 @login_required()
 def admin_site(request):
-    return render(request, 'admin.html')
+    return render(request, 'input.html')
 
 def news(request):
     news = News.objects.order_by('-pubdate')[:5]

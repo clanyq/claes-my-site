@@ -13,7 +13,7 @@
 
     <body class="{% block bodyclass %}{% endblock %}">
         {% block content %}{% endblock %}
-        <form action="/feedapp/newsform/" method="post">
+        <form action="/newsform/" method="post">
             {% csrf_token %}
             {{ newsform }}
             <input type="submit" value="Submit" />

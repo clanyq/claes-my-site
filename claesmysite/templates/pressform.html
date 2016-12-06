@@ -14,12 +14,12 @@
     <body class="{% block bodyclass %}{% endblock %}">
         {% block content %}{% endblock %}
 
-        <form action="/feedapp/pressform/" method="post">
+        <form action="/pressform/" method="post">
             {% csrf_token %}
             {{ pressform }}
             <input type="submit" value="Submit" />
         </form>
-        <form action="/feedapp/pressform/" method="post">
+        <form action="/newsform/" method="post">
             {% csrf_token %}
             {{ newsform }}
             <input type="submit" value="Submit" />
