@@ -1,6 +1,6 @@
 @import 'colors.scss';
 
-.all_press{
+.single_news{
 
     width: 70%;
     display: inline-block;
@@ -16,7 +16,7 @@
         list-style-type: none;
         padding-left: 0;
         padding-bottom: 100px;
-        a{
+        h3{
             color: $feedtext;
             text-decoration: none;
             font-size: 150%;

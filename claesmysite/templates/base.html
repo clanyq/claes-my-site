@@ -14,11 +14,15 @@
     </head>
 
     <body>
-        <img src="{% static "images/logo.png" %}">
+        <a href="{% url 'index' %}"><img src="{% static "images/logo.png" %}"></a>
+
         {% block content %}{% endblock %}
 
         {% compress js %}
         <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
         {% endcompress %}
     </body>
+    <footer>
+        kekeke
+    </footer>
 </html>

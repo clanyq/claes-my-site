@@ -1,17 +1,24 @@
 {% extends 'base.html' %}
-
+{% block content %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<div class="news">
+
+<div class="single_news">
+    <h1>NEWS</h1>
     <ul>
-        <li>{{news.title}}</li>
-        <li>{{news.body}}</li>
-        <li>{{news.pubdate}}</li>
+        <li>
+            <h3>{{news.title}}</h3>
+            <p>{{news.body|linebreaks}}</p>
+            <time>{{news.pubdate}}</time>
+
+        </li>
     </ul>
 </div>
+
 </body>
 </html>
+{% endblock %}
