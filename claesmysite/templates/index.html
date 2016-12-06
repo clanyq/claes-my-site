@@ -8,12 +8,14 @@
     <title>TEstt</title>
 </head>
 <body>
-    <img src="{% static "images/logo.png" %}">
+
+   
+
     <button class="buttonstart">GET STARTED</button>
 
     <div class="press">
         <h3 class="view_all">Press</h3>
-        <a class="view_all" href="/press">view all</a>
+        <a class="view_all" href="/press">See all</a>
         <ul>
         {% for press in output_press %}
             <li>
@@ -27,7 +29,7 @@
 
     <div class="news">
         <h3 class="view_all">News</h3>
-        <a class="view_all"href="/news">view all</a>
+        <a class="view_all"href="/news">See all</a>
         <ul>
         {% for news in output_news %}
             <li>

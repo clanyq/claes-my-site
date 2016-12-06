@@ -1,9 +1,11 @@
+@import 'all_news.scss';
+@import 'colors.scss';
+@import 'press.scss';
+
 @import url('http://fonts.googleapis.com/css?family=Titillium+Web');
 @import url('http://fonts.googleapis.com/css?family=PT+Sans');
 
-$bg-purple: #5F308C;
-$bg-blue: #255897;
-$button-green: #01AB6C;
+
 
 body {
     min-width: 800px;
@@ -22,20 +24,22 @@ body {
 
     background-color: $button-green;
     color: white;
-    -moz-border-radius: 10%;
-    -webkit-border-radius: 10%;
-    border-radius: 10%;
-    width: 15%;
-    height: 5%;
+    -moz-border-radius: 5%;
+    -webkit-border-radius: 5%;
+    border-radius: 5%;
+    width: 14%;
+    height: 4%;
     font-size: 110%;
     font-family: "Titillium Web", sans-serif;
     font-weight: bold;
     position: absolute;
     top: 45%;
     left: 42.5%;
+    border: 0px;
 }
 
 .news {
+    width: 30%;
     display: inline-block;
     position: absolute;
     top: 70%;
@@ -45,6 +49,7 @@ body {
         display: inline-block;
         margin-right: 50px;
         text-decoration: none;
+        color: $feedheader;
 
 
     }
@@ -61,19 +66,21 @@ body {
 
             a {
                 font-family: "Titillium Web", sans-serif;
-                font-size: 140%;
+                font-size: 120%;
                 text-decoration: none;
                 display: block;
+                color: $feedtext;
             }
             time {
                 font-weight: normal;
-                font-size: 100%;
+                font-size: 130%;
             }
         }
     }
 }
 
 .press {
+    width: 30%;
     position: absolute;
     top: 70%;
     left: 20%;
@@ -82,7 +89,7 @@ body {
         display: inline-block;
         margin-right: 50px;
         text-decoration: none;
-
+        color: $feedheader
 
     }
     ul{
@@ -98,13 +105,14 @@ body {
 
             a {
                 font-family: "Titillium Web", sans-serif;
-                font-size: 140%;
+                font-size: 120%;
                 text-decoration: none;
                 display: block;
+                color: $feedtext;
             }
             time {
                 font-weight: normal;
-                font-size: 100%;
+                font-size: 130%;
             }
         }
     }

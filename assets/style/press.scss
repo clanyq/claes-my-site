@@ -1,0 +1,29 @@
+@import 'colors.scss';
+
+.all_press{
+
+    width: 70%;
+    display: inline-block;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+
+    h1{
+        color: $feedheader
+    }
+    ul{
+
+        list-style-type: none;
+        padding-left: 0;
+        a{
+            color: $feedtext;
+            text-decoration: none;
+            font-size: 150%;
+            display: block;
+        }
+        li{
+            padding-top: 50;
+
+        }
+    }
+}

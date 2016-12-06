@@ -6,14 +6,18 @@
     <title>Title</title>
 </head>
 <body>
-    <ul>
-{% for item in press %}
-        <li><a href="http://google.com">{{ item.title }}</a></li>
-        <li>{{ item.pubdate }}</li>
+<div class="all_press">
+    <h1>PRESS</h1>
+        <ul>
+    {% for item in press %}
+            <li>
+                <a href={{item.url}}>{{ item.title }}</a>
+                <time>{{ item.pubdate }}</time>
+            </li>
 
-{% endfor %}
-</ul>
-
+    {% endfor %}
+    </ul>
+</div>
 </body>
 </html>
 {% endblock %}

@@ -13,7 +13,8 @@
         {% endcompress %}
     </head>
 
-    <body class="{% block bodyclass %}{% endblock %}">
+    <body>
+        <img src="{% static "images/logo.png" %}">
         {% block content %}{% endblock %}
 
         {% compress js %}

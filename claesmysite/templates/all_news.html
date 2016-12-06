@@ -6,14 +6,16 @@
  <title>Title</title>
 </head>
 <body>
- <ul>
-{% for item in news %}
-     <li><a href="{{item.slug}}">{{ item.title }}</a></li>
-     <li>{{ item.pubdate }}</li>
-     <li>{{ item.body|linebreaks }}</li>
-{% endfor %}
-</ul>
-
+<div class="all_news">
+    <h1>NEWS</h1>
+     <ul>
+    {% for item in news %}
+         <li><a href="{{item.slug}}">{{ item.title }}</a></li>
+         <li>{{ item.pubdate }}</li>
+         <li>{{ item.body|linebreaks }}</li>
+    {% endfor %}
+    </ul>
+</div>
 </body>
 </html>
 {% endblock %}
