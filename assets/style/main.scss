@@ -40,7 +40,7 @@ body {
     color: white;
     -moz-border-radius: 5%;
     -webkit-border-radius: 5%;
-    border-radius: 5%;
+    border-radius: 3px;
     width: 15%;
     height: 4%;
     font-size: 110%;
@@ -50,6 +50,7 @@ body {
     top: 45%;
     left: 45%;
     border: 0px;
+    letter-spacing: 0.5px;
 }
 
 .news {
@@ -81,11 +82,13 @@ body {
         font-weight: bold;
         list-style-type: none;
         padding-left: 0;
-        border-top: 1px groove grey;
+        border-top: 1px groove $feedborder;
+        padding-top: 10px;
 
         li{
             list-style-type: none;
             list-decoration: none;
+            padding-top: 10px;
 
             a {
                 font-family: "Titillium Web", sans-serif;
@@ -129,11 +132,13 @@ body {
         font-weight: bold;
         list-style-type: none;
         padding-left: 0;
-        border-top: 1px groove grey;
+        border-top: 1px groove $feedborder;
+        padding-top: 10px;
 
         li{
             list-style-type: none;
             list-decoration: none;
+            padding-top: 10px;
 
             a {
                 font-family: "Titillium Web", sans-serif;
