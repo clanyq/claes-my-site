@@ -23,7 +23,7 @@
     <a href="/news">view all</a>
     <ul>
 {% for news in output_news %}
-        <li><a href="http://google.com">{{ news.title }}</a></li>
+        <li><a href="/news/{{news.slug}}">{{ news.title }}</a></li>
         <li>{{ news.pubdate }}</li>
 {% endfor %}
 </ul>

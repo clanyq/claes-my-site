@@ -52,7 +52,7 @@ def press_form(request):
         else:
             print(pressform.errors)
 
-    return render(request, 'pressform.html', {'pressform': pressform})
+    return render(request, 'pressform.html', {'pressform': pressform, 'newsform': newsform})
 
 
 def user_login(request):
@@ -99,15 +99,25 @@ def pic_upload(request):
 def admin_site(request):
     return render(request, 'input.html')
 
+
 def news(request):
     news = News.objects.order_by('-pubdate')[:5]
 
     return render(request, 'news.html', {'news': news})
 
+
 def press(request):
     press = Press.objects.order_by('-pubdate')[:5]
 
     return render(request, 'press.html', {'press': press})
+
+
+def show_news(request, news_name_slug):
+    print(news_name_slug)
+
+    slug = News.objects.get(slug=news_name_slug)
+
+    return render(request, 'news.html', {'news': slug})
 
 
 

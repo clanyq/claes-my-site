@@ -7,12 +7,10 @@
 </head>
 <body>
     <ul>
-{% for item in news %}
-        <li><a href="http://google.com">{{ item.title }}</a></li>
-        <li>{{ item.pubdate }}</li>
-        <li>{{ item.body }}</li>
-{% endfor %}
-</ul>
+        <li>{{news.title}}</li>
+        <li>{{news.body}}</li>
+        <li>{{news.pubdate}}</li>
+    </ul>
 
 </body>
 </html>
