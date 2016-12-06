@@ -9,43 +9,65 @@
 
 
 body {
-    min-width: 800px;
+
+    min-width: 2000px;
     background-image: linear-gradient($bg-blue, $bg-purple);
     background-size: 100% 65%;
     background-repeat: no-repeat;
     img{
-        width: 10%;
+        max-width: 120px;
+        min-width: 120px;
         }
 
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        color: $feedheader;
+        font-family: "PT Sans", sans-serif;
+        font-size: 80%
+    }
 
 }
 
 
-.buttonstart {
 
+
+.buttonstart {
+    min-width: 150px;
+    max-width: 150px;
     background-color: $button-green;
     color: white;
     -moz-border-radius: 5%;
     -webkit-border-radius: 5%;
     border-radius: 5%;
-    width: 14%;
+    width: 15%;
     height: 4%;
     font-size: 110%;
     font-family: "Titillium Web", sans-serif;
     font-weight: bold;
     position: absolute;
     top: 45%;
-    left: 42.5%;
+    left: 45%;
     border: 0px;
 }
 
 .news {
+    min-width: 150px;
+    max-width: 400px;
     width: 30%;
     display: inline-block;
     position: absolute;
     top: 70%;
     left: 60%;
     font-size: 100%;
+      .title {
+        display: inline-block;
+        margin-right: 60%;
+        text-decoration: none;
+        color: $feedheader;
+
+       }
     .view_all {
         display: inline-block;
         margin-right: 50px;
@@ -81,16 +103,25 @@ body {
 }
 
 .press {
+    min-width: 150px;
+    max-width: 400px;
     width: 30%;
     position: absolute;
     top: 70%;
     left: 20%;
     font-size: 100%;
+     .title {
+        display: inline-block;
+        margin-right: 60%;
+        text-decoration: none;
+        color: $feedheader;
+
+       }
     .view_all {
         display: inline-block;
-        margin-right: 50px;
         text-decoration: none;
-        color: $feedheader
+        color: $feedheader;
+
 
     }
     ul{

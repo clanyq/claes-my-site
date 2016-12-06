@@ -2,10 +2,11 @@
 
 .all_news{
     width: 70%;
+    max-width: 1000px;
     display: inline-block;
     position: absolute;
     top: 70%;
-    left: 10%;
+    left: 20%;
     h1{
         color: $feedheader
     }

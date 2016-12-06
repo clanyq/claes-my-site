@@ -3,10 +3,12 @@
 .single_news{
 
     width: 70%;
+    max-width: 1000px;
     display: inline-block;
     position: absolute;
     top: 70%;
-    left: 10%;
+    left: 20%;
+
 
     h1{
         color: $feedheader
@@ -16,13 +18,16 @@
         list-style-type: none;
         padding-left: 0;
         padding-bottom: 100px;
+
         h3{
             color: $feedtext;
             text-decoration: none;
             font-size: 150%;
             display: block;
+
         }
         li{
+
             padding-top: 50;
 
         }
