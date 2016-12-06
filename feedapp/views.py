@@ -36,28 +36,19 @@ def index(request):
     return render(request, 'index.html', {'output_press': latest_press_list, 'output_news': latest_news_list})
 
 @login_required()
-def input_form(request):
+def press_form(request):
     pressform = PressForm()
-    newsform = NewsForm()
-    picform = DocumentForm(request.POST, request.FILES)
 
     if request.method == 'POST':
         pressform = PressForm(request.POST)
-        newsform = NewsForm(request.POST)
         if pressform.is_valid():
             pressform.save(commit=True)
             pressform = PressForm()
-        elif newsform.is_valid():
-            newsform.save(commit=True)
-            newsform = PressForm()
-        elif picform.is_valid():
-            picform = Document(docfile=request.FILES['docfile'])
-            picform.save()
-            picform = DocumentForm()
+
         else:
             print(pressform.errors)
 
-    return render(request, 'input.html', {'pressform': pressform, 'newsform': newsform, 'picform': picform})
+    return render(request, 'pressform.html', {'pressform': pressform})
 
 
 def user_login(request):

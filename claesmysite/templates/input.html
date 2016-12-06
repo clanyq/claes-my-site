@@ -4,29 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body><div>
-        PRESS INPUT
-         <form action="/input/" method="post">
-            {% csrf_token %}
-            {{ pressform }}
-            <input type="submit" value="Submit" />
-        </form>
-    </div>
-    <div>
-        NEWS INPUT
-        <form action="/input/" method="post">
-            {% csrf_token %}
-            {{ newsform }}
-            <input type="submit" value="Submit" />
-        </form>
-    </div>
- <div>
-     PIC UPLOAD
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ picform }}
-    <button type="submit">Upload</button>
-  </form>
-</div>
+<body>
+    <a href="../pic_upload">Add Picture</a>
+    <a href="../newsform">Add News</a>
+    <a href="../pressform">Add Press</a>
+
 </body>
 </html>
