@@ -1,4 +1,5 @@
-@import 'colors.scss';
+
+
 
 .single_news{
 
@@ -11,24 +12,26 @@
 
 
     h1{
-        color: $feedheader
+
+        color: $feedheader;
     }
     ul{
 
         list-style-type: none;
         padding-left: 0;
-        padding-bottom: 100px;
+
 
         a{
             color: $feedtext;
             text-decoration: none;
+            font-family: standard-font;
             font-size: 150%;
             display: block;
 
         }
         li{
 
-            padding-top: 50;
+
 
         }
     }

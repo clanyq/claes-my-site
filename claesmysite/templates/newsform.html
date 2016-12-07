@@ -1,4 +1,4 @@
-
+{% extends 'input_base.html' %}
 {% load staticfiles %}
 {% load compress %}
 
@@ -7,20 +7,23 @@
         <meta charset="utf-8">
         <!--<title>{% block title %}{% endblock %}</title>-->
         <title>News Form</title>
-        {% compress css %}
-        <link rel="stylesheet" href="{% static 'style/main.scss' %}" type="text/x-scss" media="screen">
-        {% endcompress %}
+
     </head>
 
     <body class="{% block bodyclass %}{% endblock %}">
-        {% block content %}{% endblock %}
-        <form action="/newsform/" method="post">
+        {% block content %}
+            <form action="/newsform/" method="post">
             {% csrf_token %}
-            {{ newsform }}
+                <ul>
+                    <li>
+                        <textfield>{{ newsform.title }}</textfield>
+                        <textfield>{{ newsform.body }}</textfield>
+                        <date>{{ newsform.pubdate }}</date>
+                    </li>
+                </ul>
+
             <input type="submit" value="Submit" />
         </form>
-        {% compress js %}
-        <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
-        {% endcompress %}
+        {% endblock %}
     </body>
 </html>

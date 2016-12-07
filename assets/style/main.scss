@@ -1,12 +1,10 @@
+@import 'fonts.scss';
+@import 'fonts.scss';
+
 @import 'all_news.scss';
-@import 'colors.scss';
 @import 'press.scss';
 @import 'news.scss';
 @import 'input.scss';
-
-@import url('http://fonts.googleapis.com/css?family=Titillium+Web');
-@import url('http://fonts.googleapis.com/css?family=PT+Sans');
-
 
 
 .basebody {
@@ -25,13 +23,11 @@
         bottom: 0;
         left: 50%;
         color: $feedheader;
-        font-family: "PT Sans", sans-serif;
+        font-family: $standard-font;
         font-size: 80%
     }
 
 }
-
-
 
 
 .buttonstart {
@@ -45,7 +41,7 @@
     width: 15%;
     height: 4%;
     font-size: 110%;
-    font-family: "Titillium Web", sans-serif;
+    font-family: $branding-font;
     font-weight: bold;
     position: absolute;
     top: 45%;
@@ -53,6 +49,10 @@
     border: 0px;
     letter-spacing: 0.5px;
 }
+
+.feed-container {
+    top: 10%;
+    }
 
 .news {
     min-width: 150px;
@@ -92,7 +92,7 @@
             padding-top: 10px;
 
             a {
-                font-family: "Titillium Web", sans-serif;
+                font-family: $branding-font;
                 font-size: 120%;
                 text-decoration: none;
                 display: block;
@@ -105,6 +105,7 @@
         }
     }
 }
+
 
 .press {
     min-width: 150px;
@@ -142,7 +143,7 @@
             padding-top: 10px;
 
             a {
-                font-family: "Titillium Web", sans-serif;
+                font-family: $branding-font;
                 font-size: 120%;
                 text-decoration: none;
                 display: block;
