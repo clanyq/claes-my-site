@@ -2,11 +2,6 @@ from django.shortcuts import render, render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-from django.template import RequestContext
-from django.core.urlresolvers import reverse
-from django.conf import settings
-from django.core.files.storage import FileSystemStorage
-
 
 from feedapp.models import News, Press, Document
 from feedapp.forms import NewsForm, PressForm, DocumentForm
@@ -71,6 +66,15 @@ def user_login(request):
 
     else:
         return render(request, 'login.html')
+
+
+@login_required()
+def pic_delete(request):
+ #File deleter
+    pic = DocumentForm(request.POST, request.FILES)
+    if request.method == 'POST':
+        pic.delete()
+
 
 @login_required()
 def pic_upload(request):

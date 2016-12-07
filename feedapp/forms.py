@@ -4,7 +4,7 @@ from django import forms
 from django.contrib.auth.models import User
 
 
-from feedapp.models import News, Press, UserProfile, Document
+from feedapp.models import News, Press, Document
 
 
 class NewsForm(forms.ModelForm):
@@ -34,12 +34,6 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('username', 'password')
-
-class UserProfileForm(forms.ModelForm):
-
-    class Meta:
-        model = UserProfile
-        fields = ('user',)
 
 
 class DocumentForm(forms.Form):
