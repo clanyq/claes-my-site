@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% load static %}
-{% block content %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>TEstt</title>
 </head>
 <body>
-
+<div>
+{% block content %}
 
 <button class="buttonstart">GET STARTED</button>
 
-<span class="feed-container">
-    <div class="press">
+<div class="feed-container">
+    <span class="press">
         <h3 class="title">Press</h3>
         <a class="view_all" href="/press">See all</a>
         <ul>
@@ -25,9 +26,8 @@
 
             {% endfor %}
         </ul>
-    </div>
-
-    <div class="news">
+    </span>
+    <span class="news">
         <h3 class="title">News</h3>
         <a class="view_all"href="/news">See all</a>
         <ul>
@@ -38,8 +38,12 @@
             </li>
         {% endfor %}
         </ul>
+    </span>
+</div>
+
     </div>
-</span>
+
 </body>
+
 </html>
 {% endblock %}

@@ -5,30 +5,32 @@
 @import 'press.scss';
 @import 'news.scss';
 
+body {
+    margin: 0;
+}
 
+.jumbotron {
 
-.basebody {
-
-    min-width: 2000px;
+    height: 65%;
+    width: 100%;
     background-image: linear-gradient($bg-blue, $bg-purple);
-    background-size: 100% 65%;
+
     background-repeat: no-repeat;
     img{
+        padding: 10px;
         max-width: 120px;
         min-width: 120px;
         }
-
-    footer {
-        position: fixed;
-        bottom: 0;
-        left: 50%;
-        color: $feedheader;
-        font-family: $standard-font;
-        font-size: 80%
-    }
-
 }
 
+footer {
+    position: relative;
+    bottom: 0;
+
+    color: $feedheader;
+    font-family: $standard-font;
+    font-size: 80%
+}
 
 .buttonstart {
 
@@ -51,19 +53,21 @@
 }
 
 .feed-container {
-    top: 10%;
+    position: realtive;
+    display: vertical-align;
     }
 
-.news {
+
+.press {
     min-width: 150px;
     max-width: 400px;
     width: 30%;
+    position: relative;
     display: inline-block;
-    position: absolute;
     top: 70%;
-    left: 60%;
+    left: 20%;
     font-size: 100%;
-      .title {
+     .title {
         display: inline-block;
         margin-right: 60%;
         text-decoration: none;
@@ -72,7 +76,6 @@
        }
     .view_all {
         display: inline-block;
-        margin-right: 50px;
         text-decoration: none;
         color: $feedheader;
 
@@ -106,14 +109,12 @@
     }
 }
 
-
-.press {
+.news {
     min-width: 150px;
     max-width: 400px;
     width: 30%;
-    position: absolute;
-    top: 70%;
-    left: 20%;
+    position: relative;
+    float: right;
     font-size: 100%;
      .title {
         display: inline-block;
