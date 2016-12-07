@@ -6,20 +6,6 @@ from django.contrib.auth.decorators import login_required
 from feedapp.models import News, Press, Image
 from feedapp.forms import NewsForm, PressForm, ImageForm
 
-@login_required()
-def news_form(request):
-    newsform = NewsForm()
-
-    if request.method == 'POST':
-        newsform = NewsForm(request.POST)
-        if newsform.is_valid():
-            newsform.save(commit=True)
-            newsform = NewsForm()
-        else:
-            print(newsform.errors)
-
-    return render(request, 'newsform.html', {'newsform': newsform})
-
 
 def index(request):
     latest_press_list = Press.objects.order_by('-pubdate')[:3]
@@ -29,20 +15,6 @@ def index(request):
 
 
     return render(request, 'index.html', {'output_press': latest_press_list, 'output_news': latest_news_list})
-
-@login_required()
-def press_form(request):
-    pressform = PressForm()
-
-    if request.method == 'POST':
-        pressform = PressForm(request.POST)
-        if pressform.is_valid():
-            pressform.save(commit=True)
-            pressform = PressForm()
-        else:
-            print(pressform.errors)
-
-    return render(request, 'pressform.html', {'pressform': pressform})
 
 
 def user_login(request):
@@ -73,33 +45,69 @@ def user_logout(request):
     return HttpResponseRedirect('/')
 
 
-@login_required()
+def news_form(request):
+    if request.user.is_authenticated:
+        newsform = NewsForm()
+
+        if request.method == 'POST':
+            newsform = NewsForm(request.POST)
+            if newsform.is_valid():
+                newsform.save(commit=True)
+                newsform = NewsForm()
+            else:
+                print(newsform.errors)
+
+        return render(request, 'newsform.html', {'newsform': newsform})
+    else:
+        return HttpResponseRedirect('/login')
+
+def press_form(request):
+    if request.user.is_authenticated:
+        pressform = PressForm()
+
+        if request.method == 'POST':
+            pressform = PressForm(request.POST)
+            if pressform.is_valid():
+                pressform.save(commit=True)
+                pressform = PressForm()
+            else:
+                print(pressform.errors)
+
+        return render(request, 'pressform.html', {'pressform': pressform})
+    else:
+        return HttpResponseRedirect('/login')
+
+
 def pic_remove(request):
- #File deleter
-    return render(request, 'pic_remove.html')
+    if request.user.is_authenticated:
+        return render(request, 'pic_remove.html')
+    else:
+        return HttpResponseRedirect('/login')
 
 
-@login_required()
 def pic_upload(request):
-    # Handle file upload
-    if request.method == 'POST':
-        form = ImageForm(request.POST, request.FILES)
-        if form.is_valid():
-            newimg = Image(imgfile = request.FILES['imgfile'])
-            newimg.save()
+    if request.user.is_authenticated:
+        # Handle file upload
+        if request.method == 'POST':
+            form = ImageForm(request.POST, request.FILES)
+            if form.is_valid():
+                newimg = Image(imgfile = request.FILES['imgfile'])
+                newimg.save()
+                form = ImageForm()
+
+        else:
             form = ImageForm()
 
+        return render(request, 'pic_upload.html', {'form': form})
     else:
-        form = ImageForm()
-
-    return render(request, 'pic_upload.html',{'form': form},
-
-    )
+        return HttpResponseRedirect('/login')
 
 
-@login_required()
 def admin_site(request):
-    return render(request, 'input.html')
+    if request.user.is_authenticated:
+        return render(request, 'input.html')
+    else:
+        return HttpResponseRedirect('/login')
 
 
 def all_news(request):
