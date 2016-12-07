@@ -14,7 +14,6 @@ def index(request):
                                           'output_news': latest_news_list})
 
 
-
 def all_news(request):
     news = News.objects.order_by('-pubdate')[:5]
 

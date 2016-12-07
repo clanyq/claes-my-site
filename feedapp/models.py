@@ -1,6 +1,8 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.dispatch import receiver
+from django.db.models.signals import pre_delete
 
 from django.template.defaultfilters import slugify
 
@@ -33,3 +35,13 @@ class Image(models.Model):
 
     imgfile = models.ImageField(upload_to='images/')
 
+
+
+    def __str__(self):
+        return (str(self.imgfile))
+
+
+@receiver(pre_delete, sender=Image)
+def image_delete(sender, instance, **kwargs):
+
+    instance.imgfile.delete(False)
