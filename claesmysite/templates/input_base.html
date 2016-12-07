@@ -13,7 +13,7 @@
         {% endcompress %}
     </head>
 
-    <body class="basebody">
+    <body class="input_body">
         <a href="{% url 'index' %}"><img src="{% static "images/logo.png" %}"></a>
 
         {% block content %}{% endblock %}
@@ -21,9 +21,7 @@
         {% compress js %}
         <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
         {% endcompress %}
-        <footer>
-            See you in a couple of days! :D
-         </footer>
+
     </body>
 
 </html>

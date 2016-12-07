@@ -1,6 +1,6 @@
 from django.shortcuts import render, render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 from feedapp.models import News, Press, Image
@@ -68,12 +68,15 @@ def user_login(request):
         return render(request, 'login.html')
 
 
+def user_logout(request):
+    logout(request)
+    return HttpResponseRedirect('/')
+
+
 @login_required()
-def pic_delete(request):
+def pic_remove(request):
  #File deleter
-    pic = ImageForm(request.POST, request.FILES)
-    if request.method == 'POST':
-        pic.delete()
+    return render(request, 'pic_remove.html')
 
 
 @login_required()
@@ -117,6 +120,9 @@ def show_news(request, news_name_slug):
     slug = News.objects.get(slug=news_name_slug)
 
     return render(request, 'news.html', {'news': slug})
+
+
+
 
 
 

@@ -2,13 +2,14 @@
 @import 'colors.scss';
 @import 'press.scss';
 @import 'news.scss';
+@import 'input.scss';
 
 @import url('http://fonts.googleapis.com/css?family=Titillium+Web');
 @import url('http://fonts.googleapis.com/css?family=PT+Sans');
 
 
 
-body {
+.basebody {
 
     min-width: 2000px;
     background-image: linear-gradient($bg-blue, $bg-purple);
