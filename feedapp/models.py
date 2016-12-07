@@ -20,6 +20,9 @@ class News(models.Model):
     def __str__(self):
         return(self.title)
 
+    class Meta:
+        verbose_name_plural = 'News'
+
 
 class Press(models.Model):
     title = models.CharField(max_length=100)
@@ -27,15 +30,16 @@ class Press(models.Model):
     source = models.CharField(max_length=50)
     pubdate = models.DateField()
 
+
     def __str__(self):
         return(self.title)
 
+    class Meta:
+        verbose_name_plural = 'Press'
 
 class Image(models.Model):
 
     imgfile = models.ImageField(upload_to='images/')
-
-
 
     def __str__(self):
         return (str(self.imgfile))
