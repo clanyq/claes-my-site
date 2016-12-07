@@ -31,14 +31,14 @@
 
 
 .buttonstart {
-    min-width: 150px;
-    max-width: 150px;
+
+    width: 150px;
     background-color: $button-green;
     color: white;
     -moz-border-radius: 5%;
     -webkit-border-radius: 5%;
     border-radius: 3px;
-    width: 15%;
+
     height: 4%;
     font-size: 110%;
     font-family: $branding-font;

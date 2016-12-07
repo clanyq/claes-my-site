@@ -1,7 +1,11 @@
 from django.contrib import admin
 from feedapp.models import News, Press, Image
 # Register your models here.
+class ArticleAdmin(admin.ModelAdmin):
+   prepopulated_fields = {"slug": ("title",)}
 
-admin.site.register(News)
 admin.site.register(Press)
 admin.site.register(Image)
+admin.site.register(News, ArticleAdmin)
+
+
