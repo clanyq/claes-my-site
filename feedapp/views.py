@@ -3,8 +3,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 
-from feedapp.models import News, Press, Document
-from feedapp.forms import NewsForm, PressForm, DocumentForm
+from feedapp.models import News, Press, Image
+from feedapp.forms import NewsForm, PressForm, ImageForm
 
 @login_required()
 def news_form(request):
@@ -71,7 +71,7 @@ def user_login(request):
 @login_required()
 def pic_delete(request):
  #File deleter
-    pic = DocumentForm(request.POST, request.FILES)
+    pic = ImageForm(request.POST, request.FILES)
     if request.method == 'POST':
         pic.delete()
 
@@ -80,14 +80,14 @@ def pic_delete(request):
 def pic_upload(request):
     # Handle file upload
     if request.method == 'POST':
-        form = DocumentForm(request.POST, request.FILES)
+        form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
-            newdoc = Document(docfile = request.FILES['docfile'])
-            newdoc.save()
-            form = DocumentForm()
+            newimg = Image(imgfile = request.FILES['imgfile'])
+            newimg.save()
+            form = ImageForm()
 
     else:
-        form = DocumentForm()
+        form = ImageForm()
 
     return render(request, 'pic_upload.html',{'form': form},
 

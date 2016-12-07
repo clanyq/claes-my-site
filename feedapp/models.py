@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+
 from django.template.defaultfilters import slugify
 
 
@@ -28,7 +29,7 @@ class Press(models.Model):
         return(self.title)
 
 
+class Image(models.Model):
 
-class Document(models.Model):
-    docfile = models.FileField(upload_to='documents/')
+    imgfile = models.ImageField(upload_to='images/')
 

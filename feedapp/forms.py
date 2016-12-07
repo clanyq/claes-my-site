@@ -4,7 +4,7 @@ from django import forms
 from django.contrib.auth.models import User
 
 
-from feedapp.models import News, Press, Document
+from feedapp.models import News, Press, Image
 
 
 class NewsForm(forms.ModelForm):
@@ -36,9 +36,9 @@ class UserForm(forms.ModelForm):
         fields = ('username', 'password')
 
 
-class DocumentForm(forms.Form):
-    docfile = forms.FileField(label='Select a picture',)
+class ImageForm(forms.Form):
+    imgfile = forms.ImageField(label='Select a picture',)
 
     class Meta:
-        model = Document
-        fields = ('docfile')
+        model = Image
+        fields = ('imagefile')
