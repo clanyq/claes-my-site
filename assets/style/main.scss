@@ -6,7 +6,13 @@
 @import 'news.scss';
 @import 'index.scss';
 
+
+
 body{
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        font-size: 40px;
+    }
     font-size: 16px;
     margin: 0;
 }
@@ -66,8 +72,11 @@ body{
         width: 100%;
 
         .carousel{
+            padding-top: 6em;
             text-align: center;
             width: 30%;
+            max-width: 30em;
+            min-width: 20em;
             height: auto;
             display: block;
             margin: auto;
@@ -79,7 +88,8 @@ body{
 
 
             .buttonstart {
-              
+                width: 7em;
+                height: 5em;
                 text-transform: uppercase;
                 background-color: $button-green;
                 color: white;
