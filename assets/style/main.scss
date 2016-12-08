@@ -7,7 +7,7 @@
 @import 'index.scss';
 
 body{
-    
+    font-size: 16px;
     margin: 0;
 }
 
@@ -17,7 +17,7 @@ body{
     background: linear-gradient($bg-blue, $bg-purple);
     .nav{
         text-align: center;
-        max-width: 1200px;
+        max-width: 80em;
         display: table;      
         width: 100%;
         margin: auto;
@@ -62,33 +62,31 @@ body{
         }
 
     .jumbotron {
-
-        height: 55%;
+        height: 45em;
         width: 100%;
+
         .carousel{
+            text-align: center;
             width: 30%;
             height: auto;
             display: block;
             margin: auto;
-            margin-top: 15%;
-            align: center;
+
         }
-        .buttonstart {
-            display: block;
-            margin: auto;
-            margin-top: 15%;
-            text-transform: uppercase;
-            width: 150px;
-            background-color: $button-green;
-            color: white;
-            -moz-border-radius: 5%;
-            -webkit-border-radius: 5%;
-            border-radius: 3px;
-            height: 4%;
-            font-size: 110%;
-            font-family: $branding-font;
-            font-weight: bold;
-            border: 0px;
+        .button{
+            text-align: center;
+            padding-top: 4em;
+
+
+            .buttonstart {
+              
+                text-transform: uppercase;
+                background-color: $button-green;
+                color: white;
+                font-family: $branding-font;
+                font-weight: bold;
+                border: 0px;
+          }
         
     }
     }
