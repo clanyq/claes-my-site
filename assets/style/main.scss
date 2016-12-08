@@ -1,5 +1,5 @@
 @import 'fonts.scss';
-@import 'fonts.scss';
+@import 'colors.scss';
 
 @import 'all_news.scss';
 @import 'press.scss';
@@ -22,6 +22,7 @@ body{
         width: 100%;
         margin: auto;
         text-transform: uppercase;
+        font-family: $branding-font;
 
          .logo {
             vertical-align: middle;
@@ -31,6 +32,7 @@ body{
                 padding: 0.5em;
              }
             }
+
         .main-nav{
             vertical-align: middle;
             display: table-cell;
@@ -63,27 +65,34 @@ body{
 
         height: 55%;
         width: 100%;
-    }
-
-    .buttonstart {
-
-        top: 45%;
-        left: 45%;
-        text-transform: uppercase;
-        width: 150px;
-        background-color: $button-green;
-        color: white;
-        -moz-border-radius: 5%;
-        -webkit-border-radius: 5%;
-        border-radius: 3px;
-        height: 4%;
-        font-size: 110%;
-        font-family: $branding-font;
-        font-weight: bold;
-        position: absolute;
-        border: 0px;
+        .carousel{
+            width: 30%;
+            height: auto;
+            display: block;
+            margin: auto;
+            margin-top: 15%;
+            align: center;
+        }
+        .buttonstart {
+            display: block;
+            margin: auto;
+            margin-top: 15%;
+            text-transform: uppercase;
+            width: 150px;
+            background-color: $button-green;
+            color: white;
+            -moz-border-radius: 5%;
+            -webkit-border-radius: 5%;
+            border-radius: 3px;
+            height: 4%;
+            font-size: 110%;
+            font-family: $branding-font;
+            font-weight: bold;
+            border: 0px;
         
     }
+    }
+
 }
 
 
@@ -97,7 +106,7 @@ footer {
     text-align: center;
     color: $feedheader;
     font-family: $standard-font;
-    
+
 
 }
 
