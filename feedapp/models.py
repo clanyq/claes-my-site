@@ -10,7 +10,7 @@ from django.template.defaultfilters import slugify
 class News(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField(max_length=2000,)
-    pubdate = models.DateField()
+    pubdate = models.DateField(auto_now_add=True)
     slug = models.SlugField(unique=True, blank=True)
 
     def save(self, *args, **kwargs):
@@ -28,7 +28,7 @@ class Press(models.Model):
     title = models.CharField(max_length=100)
     url = models.URLField()
     source = models.CharField(max_length=50)
-    pubdate = models.DateField()
+    pubdate = models.DateField(auto_now_add=True)
 
 
     def __str__(self):

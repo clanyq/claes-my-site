@@ -13,7 +13,7 @@ body {
 
     height: 65%;
     width: 100%;
-    background-image: linear-gradient($bg-blue, $bg-purple);
+    background: linear-gradient($bg-blue, $bg-purple);
 
     background-repeat: no-repeat;
     img{
@@ -23,13 +23,38 @@ body {
         }
 }
 
-footer {
-    position: relative;
-    bottom: 0;
+.nav{
+    background: $bg-blue;
+    .logo {
+        padding: 10px;
+        max-width: 120px;
+        min-width: 120px;
+        display: inline;
+        }
+    .main-nav{
+        float: right;
+         li {
+            list-style-type: none;
+            float: right;
+        }
+    }
+    .contact-nav{
+        float: right;
+         li {
+            list-style-type: none;
+            float: right;
+        }
+    }
+}
 
+footer {
+    position: realtive;
+    font-size: 0.7em;
+    vertical-align: middle;
+    display: table-row;
     color: $feedheader;
     font-family: $standard-font;
-    font-size: 80%
+    height:1px;
 }
 
 .buttonstart {
@@ -54,18 +79,17 @@ footer {
 
 .feed-container {
     position: realtive;
-    display: vertical-align;
+    display:table-cell;
+    vertical-align: middle;
+
     }
 
 
 .press {
     min-width: 150px;
     max-width: 400px;
-    width: 30%;
     position: relative;
     display: inline-block;
-    top: 70%;
-    left: 20%;
     font-size: 100%;
      .title {
         display: inline-block;
@@ -112,7 +136,6 @@ footer {
 .news {
     min-width: 150px;
     max-width: 400px;
-    width: 30%;
     position: relative;
     float: right;
     font-size: 100%;

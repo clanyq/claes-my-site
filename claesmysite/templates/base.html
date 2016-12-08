@@ -7,16 +7,33 @@
     <head>
         <meta charset="utf-8">
         <title>Claes</title>
-
+            <div class="nav">
+                <div class="logo">
+                    <a href="{% url 'index' %}"><img src="{% static "images/logo.png" %}"></a>
+                </div>
+                <div class="main-nav">
+                    <ul>
+                        <li>BLOG</li>
+                        <li>PRODUCTS</li>
+                        <li>SERVICES</li>
+                    </ul>
+                </div>
+                <div class="contact-nav">
+                    <ul>
+                        <li>ABOUT</li>
+                        <li>CONTACT</li>
+                    </ul>
+                </div>
+            </div>
         {% compress css %}
         <link rel="stylesheet" href="{% static 'style/main.scss' %}" type="text/x-scss" media="screen">
         {% endcompress %}
     </head>
 
     <body>
-        <div class="jumbotron">
-        <a href="{% url 'index' %}"><img src="{% static "images/logo.png" %}"></a>
-        </div>
+        <section class="jumbotron">
+
+        </section>
         {% block content %}{% endblock %}
 
         {% compress js %}
