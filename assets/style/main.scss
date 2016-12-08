@@ -21,6 +21,7 @@ body{
         display: table;      
         width: 100%;
         margin: auto;
+        text-transform: uppercase;
 
          .logo {
             
@@ -74,6 +75,7 @@ footer {
 
 .buttonstart {
 
+    text-transform: uppercase;
     width: 150px;
     background-color: $button-green;
     color: white;
