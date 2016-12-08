@@ -9,7 +9,7 @@ from django.template.defaultfilters import slugify
 
 class News(models.Model):
     title = models.CharField(max_length=100)
-    body = models.TextField(max_length=2000,)
+    body = models.TextField()
     pubdate = models.DateField(auto_now_add=True)
     slug = models.SlugField(unique=True, blank=True)
 

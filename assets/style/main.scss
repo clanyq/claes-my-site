@@ -24,7 +24,11 @@ body {
 }
 
 .nav{
+    position: relative;
+    display: block-inline;
     background: $bg-blue;
+    width: 100%;
+    margin: auto;
     .logo {
         padding: 10px;
         max-width: 120px;
@@ -32,23 +36,19 @@ body {
         display: inline;
         }
     .main-nav{
+    display: table-cell;
         float: right;
          li {
             list-style-type: none;
             float: right;
+
+            }
         }
     }
-    .contact-nav{
-        float: right;
-         li {
-            list-style-type: none;
-            float: right;
-        }
-    }
-}
+
 
 footer {
-    position: realtive;
+    position: relative;
     font-size: 0.7em;
     vertical-align: middle;
     display: table-row;
