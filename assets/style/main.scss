@@ -13,18 +13,18 @@ body{
 
 
 .main-header{
-
+    
     background: linear-gradient($bg-blue, $bg-purple);
     .nav{
         text-align: center;
-        max-width: 720px;
+        max-width: 1200px;
         display: table;      
         width: 100%;
         margin: auto;
         text-transform: uppercase;
 
          .logo {
-            
+            vertical-align: middle;
             display: inline;
              img {
                 max-width: 10em;
@@ -33,63 +33,73 @@ body{
             }
         .main-nav{
             vertical-align: middle;
-            display: table-cell;                       
-             li {
-                color: white;
-                list-style-type: none;
-                display: inline-block;
-                padding: 5px 10px;
+            display: table-cell;
+            ul{
+                margin: 0;                         
+                li{
+                    color: white;
+                    list-style-type: none;
+                    display: inline-block;
+                    padding: 5px 10px;
                 }
             }
+        }
         .about-nav{
             vertical-align: middle;
-            display: table-cell;           
+            display: table-cell;   
+            ul {  
+            margin: 0;      
              li {
-                color: white;
-                list-style-type: none;
-                display: inline-block;
-                padding: 5px 10px;
-                }
-            }     
+                    color: white;
+                    list-style-type: none;
+                    display: inline-block;
+                    padding: 5px 10px;
+                    }
+                }     
+            }
         }
+
     .jumbotron {
 
         height: 55%;
         width: 100%;
+    }
+
+    .buttonstart {
+
+        top: 45%;
+        left: 45%;
+        text-transform: uppercase;
+        width: 150px;
+        background-color: $button-green;
+        color: white;
+        -moz-border-radius: 5%;
+        -webkit-border-radius: 5%;
+        border-radius: 3px;
+        height: 4%;
+        font-size: 110%;
+        font-family: $branding-font;
+        font-weight: bold;
+        position: absolute;
+        border: 0px;
+        
     }
 }
 
 
 
 footer {
-    position: static;
-    font-size: 0.7em;
-    vertical-align: middle;
-    display: table-row;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
     color: $feedheader;
     font-family: $standard-font;
-    height:1px;
+    
+
 }
 
 
-
-.buttonstart {
-
-    text-transform: uppercase;
-    width: 150px;
-    background-color: $button-green;
-    color: white;
-    -moz-border-radius: 5%;
-    -webkit-border-radius: 5%;
-    border-radius: 3px;
-    height: 4%;
-    font-size: 110%;
-    font-family: $branding-font;
-    font-weight: bold;
-    position: absolute;
-    top: 45%;
-    left: 45%;
-    border: 0px;
-    letter-spacing: 0.5px;
-}
 

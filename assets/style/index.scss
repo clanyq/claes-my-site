@@ -2,25 +2,26 @@
     
     display: table;
     margin: auto;
+    padding-bottom: 50px;
+
     
     .feed {
         display: table-cell;
-        padding: 10px;
-   
-        font-size: 100%;
+        padding: 25px 40px;
+        width: 300px;
+        min-width: 300px;
+
+
         .title {
-            display: inline-block;
-            margin-right: 60%;
+            display: inline;
             text-decoration: none;
             color: $feedheader;
 
            }
-        .view_all {
-            display: inline-block;
+        .see_all {
+            float: right;
             text-decoration: none;
             color: $feedheader;
-
-
         }
         ul{
             font-size: 70%;
@@ -31,7 +32,6 @@
             padding-top: 10px;
 
             li{
-                list-style-type: none;
                 list-decoration: none;
                 padding-top: 10px;
 
@@ -44,7 +44,7 @@
                 }
                 time {
                     font-weight: normal;
-                    font-size: 130%;
+                    
                 }
             }
         }
