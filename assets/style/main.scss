@@ -5,47 +5,42 @@
 @import 'press.scss';
 @import 'news.scss';
 
-body {
-    margin: 0;
-}
 
 
-.nav{
-    position: relative;
-    display: block-inline;
-    background: $bg-blue;
-    width: 100%;
-    margin: auto;
-    .logo {
-        display: inline;
-         img {
-            max-width: 10em;
+.main-header{
+    background: linear-gradient($bg-blue, $bg-purple);
+    .nav{
+        display: table;
+        position: relative;
+        width: 100%;
+        margin: auto;
+        .logo {
+            display: inline;
+             img {
+                max-width: 10em;
 
-            padding: 0.5em;
-         }
-        }
-    .main-nav{
-    display: table-cell;
-        float: right;
-         li {
-            color: white;
-            list-style-type: none;
+                padding: 0.5em;
+             }
+            }
+        .main-nav{
+        display: table-cell;
             float: right;
-            padding: 5px 10px;
+             li {
+                color: white;
+                list-style-type: none;
+                float: right;
+                padding: 5px 10px;
 
-            }
-            .about{
-                padding-left: 10rem;
-            }
+                }
+            }    
         }
-    }
+}
 
 .jumbotron {
 
     height: 65%;
     width: 100%;
-    background: linear-gradient($bg-blue, $bg-purple);
-    background-repeat: no-repeat;
+  
 
 }
 
