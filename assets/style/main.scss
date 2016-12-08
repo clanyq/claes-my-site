@@ -9,19 +9,6 @@ body {
     margin: 0;
 }
 
-.jumbotron {
-
-    height: 65%;
-    width: 100%;
-    background: linear-gradient($bg-blue, $bg-purple);
-
-    background-repeat: no-repeat;
-    img{
-        padding: 10px;
-        max-width: 120px;
-        min-width: 120px;
-        }
-}
 
 .nav{
     position: relative;
@@ -30,22 +17,37 @@ body {
     width: 100%;
     margin: auto;
     .logo {
-        padding: 10px;
-        max-width: 120px;
-        min-width: 120px;
         display: inline;
+         img {
+            max-width: 10em;
+
+            padding: 0.5em;
+         }
         }
     .main-nav{
     display: table-cell;
         float: right;
          li {
+            color: white;
             list-style-type: none;
             float: right;
+            padding: 5px 10px;
 
+            }
+            .about{
+                padding-left: 10rem;
             }
         }
     }
 
+.jumbotron {
+
+    height: 65%;
+    width: 100%;
+    background: linear-gradient($bg-blue, $bg-purple);
+    background-repeat: no-repeat;
+
+}
 
 footer {
     position: relative;
@@ -56,6 +58,8 @@ footer {
     font-family: $standard-font;
     height:1px;
 }
+
+
 
 .buttonstart {
 
@@ -78,11 +82,11 @@ footer {
 }
 
 .feed-container {
-    position: realtive;
+    position: relative;
     display:table-cell;
-    vertical-align: middle;
-
-    }
+    align: center;
+    margin-left: 100px;
+}
 
 
 .press {

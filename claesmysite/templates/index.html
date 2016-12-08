@@ -8,13 +8,12 @@
     <title>TEstt</title>
 </head>
 <body>
-<div>
+
 {% block content %}
 
 
-
 <div class="feed-container">
-    <span class="press">
+    <div class="press">
         <h3 class="title">Press</h3>
         <a class="view_all" href="/press">See all</a>
         <ul>
@@ -26,8 +25,8 @@
 
             {% endfor %}
         </ul>
-    </span>
-    <span class="news">
+    </div>
+    <div class="news">
         <h3 class="title">News</h3>
         <a class="view_all"href="/news">See all</a>
         <ul>
@@ -38,12 +37,10 @@
             </li>
         {% endfor %}
         </ul>
-    </span>
-</div>
-
     </div>
+</div>
+{% endblock %}
 
 </body>
 
 </html>
-{% endblock %}
