@@ -1,0 +1,103 @@
+.feed-container {
+    position: relative;
+    display:table-cell;
+    align: center;
+    margin-left: 100px;
+}
+
+
+.press {
+    min-width: 150px;
+    max-width: 400px;
+    position: relative;
+    display: inline-block;
+    font-size: 100%;
+     .title {
+        display: inline-block;
+        margin-right: 60%;
+        text-decoration: none;
+        color: $feedheader;
+
+       }
+    .view_all {
+        display: inline-block;
+        text-decoration: none;
+        color: $feedheader;
+
+
+    }
+    ul{
+        font-size: 70%;
+        font-weight: bold;
+        list-style-type: none;
+        padding-left: 0;
+        border-top: 1px groove $feedborder;
+        padding-top: 10px;
+
+        li{
+            list-style-type: none;
+            list-decoration: none;
+            padding-top: 10px;
+
+            a {
+                font-family: $branding-font;
+                font-size: 120%;
+                text-decoration: none;
+                display: block;
+                color: $feedtext;
+            }
+            time {
+                font-weight: normal;
+                font-size: 130%;
+            }
+        }
+    }
+}
+
+.news {
+    min-width: 150px;
+    max-width: 400px;
+    position: relative;
+    float: right;
+    font-size: 100%;
+     .title {
+        display: inline-block;
+        margin-right: 60%;
+        text-decoration: none;
+        color: $feedheader;
+
+       }
+    .view_all {
+        display: inline-block;
+        text-decoration: none;
+        color: $feedheader;
+
+
+    }
+    ul{
+        font-size: 70%;
+        font-weight: bold;
+        list-style-type: none;
+        padding-left: 0;
+        border-top: 1px groove $feedborder;
+        padding-top: 10px;
+
+        li{
+            list-style-type: none;
+            list-decoration: none;
+            padding-top: 10px;
+
+            a {
+                font-family: $branding-font;
+                font-size: 120%;
+                text-decoration: none;
+                display: block;
+                color: $feedtext;
+            }
+            time {
+                font-weight: normal;
+                font-size: 130%;
+            }
+        }
+    }
+}
