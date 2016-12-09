@@ -1,16 +1,17 @@
 
 
 .feed-container {
-    
+    font-family: $standard-font;
     display: table;
     margin: auto;
-    padding-bottom: 50px;
+    padding-bottom: 75px;
+    font-weight: bold;
 
     
     .feed {
         display: table-cell;
-        padding: 25px 40px;
-        width: 300px;
+        padding: 25px 30px;
+        width: 400px;
         min-width: 300px;
 
 
@@ -21,13 +22,12 @@
 
            }
         .see_all {
+            font-size: 0.8em;
             float: right;
             text-decoration: none;
-            color: $feedheader;
+            color: $greytext;
         }
         ul{
-            font-size: 70%;
-            font-weight: bold;
             list-style-type: none;
             padding-left: 0;
             border-top: 1px groove $feedborder;
@@ -38,14 +38,14 @@
                 padding-top: 10px;
 
                 a {
-                    font-family: $branding-font;
-                    font-size: 120%;
+                    
                     text-decoration: none;
                     display: block;
                     color: $feedtext;
                 }
                 time {
                     font-weight: normal;
+                    color: $greytext;
                     
                 }
             }

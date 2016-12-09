@@ -16,6 +16,7 @@
         font-size: 2em;
     }
     ul{
+        margin-top: 70px;
         list-style-type: none;
         .press-header,
         .news-header{
@@ -24,6 +25,10 @@
                 color: $feedtext;
                 text-decoration: none;
                 font-family: $standard-font;
+                font-size: 1.4em;
+            }
+            time{
+                color: $greytext;
             }
         }
         .press-header{
@@ -32,7 +37,12 @@
     }
     p{
         margin-bottom: 20px;
+
     }
+    .read-more{
+            text-decoration: none;
+        
+        }
 }
 
 

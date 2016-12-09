@@ -23,14 +23,15 @@ body {
         font-size: 28px;
         }
         text-align: center;
-        max-width: 80em;
         display: table;
-        width: 100%;
         margin: auto;
         text-transform: uppercase;
+        font-size: 12px;
         font-family: $branding-font;
         font-weight: bold;
         margin-bottom: 50px;
+        max-width: 1500px;
+        width: 100%;
         ul {
             margin: 0;
             li {
@@ -44,16 +45,16 @@ body {
         .main-nav,
         .about-nav {
             vertical-align: middle;
-            display: inline;
+            display: inline-block;
             display: table-cell;
         }
         .logo {        
-            display: inline;
+            display: inline-block;
             img {
                 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
                     font-size: 20px;
                 }
-                max-width: 7em;
+                width: 7em;
                 padding: 10px;
             }
         }
@@ -62,7 +63,6 @@ body {
         @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
             font-size: 16px;
         }
-        width: 960px;
         text-align: center;
         margin: auto;
         .jumbotron-title{
@@ -102,11 +102,13 @@ body {
     color: white;
     font-family: $branding-font;
     font-weight: bold;
+    border-radius: 3px;
 }
 
 footer {
     position: relative;
     text-align: center;
-    color: $feedheader;
+    font-size: 12px;
     font-family: $standard-font;
+    color: $greytext;
 }
