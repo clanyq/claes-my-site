@@ -9,7 +9,7 @@
 
 body {
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-        font-size: 40px;
+        font-size: 28px;
     }
     font-size: 16px;
     margin: 0;
@@ -17,9 +17,11 @@ body {
 .main-header {
     background: linear-gradient($bg-blue, $bg-purple);
     padding-bottom: 100px;
+    color: white;
+    font-family: $branding-font;
     .nav {
         @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-        font-size: 30px;
+        font-size: 28px;
         }
         text-align: center;
         max-width: 80em;
@@ -28,6 +30,8 @@ body {
         margin: auto;
         text-transform: uppercase;
         font-family: $branding-font;
+        font-weight: bold;
+        margin-bottom: 50px;
         ul {
             margin: 0;
             li {
@@ -48,28 +52,44 @@ body {
             display: inline;
             img {
                 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-                    font-size: 30px;
+                    font-size: 20px;
                 }
-                max-width: 10em;
+                max-width: 7em;
                 padding: 10px;
             }
         }
     }
     .jumbotron {
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            font-size: 16px;
+        }
+        width: 960px;
+        text-align: center;
+        margin: auto;
+        .jumbotron-title{
+            font-size: 1.8em;
+            font-family: $branding-font;
+            font-weight: bold;
+        }
 
         .carousel {
-            padding-top: 100px;
+            padding-top: 80px;
             text-align: center;
             width: 40%;
             max-width: 30em;
             min-width: 10em;
             height: auto;
-            display: block;
             margin: auto;
         }
         .cta {
             text-align: center;
             padding-top: 50px;
+        }
+        p{
+            max-width: 700px;
+            margin: auto;
+            line-height: 120%;
+            margin-bottom: 20px;
         }
     }
 }
@@ -79,16 +99,13 @@ body {
     padding: 10px;
     text-transform: uppercase;
     background-color: $button-green;
+    border: 0px;
     color: white;
     font-family: $branding-font;
     font-weight: bold;
-    border: 0px;
 }
 
 footer {
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-        font-size: 20px;
-    }
     position: relative;
     text-align: center;
     color: $feedheader;
