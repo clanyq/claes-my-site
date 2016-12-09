@@ -2,6 +2,7 @@
     font-family: $standard-font;
     font-weight: bold;
     font-size: 1.5em;
+    color: $darkgreytext;
     text-align: center;
     margin: auto;
     max-width: 500px;
@@ -33,7 +34,7 @@
 
            }
         .see_all {
-            font-size: 0.8em;
+            font-size: 0.7em;
             float: right;
             text-decoration: none;
             color: $greytext;
@@ -43,11 +44,10 @@
             padding-left: 0;
             border-top: 1px solid $feedborder;
             margin-top: 10px;
-
+            font-size: 0.8em;
             li{
                 list-decoration: none;
                 padding-top: 10px;
-
                 a {
                     
                     text-decoration: none;
