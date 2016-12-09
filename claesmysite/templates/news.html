@@ -1,25 +1,25 @@
 {% extends 'base.html' %}
-{% block content %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+{% block content %}
 <div class="single_news">
     <h1>NEWS</h1>
     <ul>
         <li>
-            <a>{{news.title}}</a>
-            <time>{{news.pubdate}}</time>
+            <div class='news-header'>
+                <a>{{news.title}},</a>
+                <time>{{news.pubdate}}</time>
+            </div>
             <p>{{news.body|linebreaks}}</p>
-
-
         </li>
     </ul>
 </div>
-
+{% endblock %}
 </body>
 </html>
-{% endblock %}
+

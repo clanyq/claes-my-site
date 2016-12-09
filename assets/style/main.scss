@@ -16,7 +16,7 @@ body {
 }
 .main-header {
     background: linear-gradient($bg-blue, $bg-purple);
-    padding-bottom: 20em;
+    padding-bottom: 100px;
     .nav {
         text-align: center;
         max-width: 80em;
@@ -45,32 +45,32 @@ body {
             display: inline;
             img {
                 max-width: 10em;
-                padding: 0.5em;
+                padding: 10px;
             }
         }
     }
     .jumbotron {
 
         .carousel {
-            padding-top: 6em;
+            padding-top: 100px;
             text-align: center;
-            width: 30%;
+            width: 40%;
             max-width: 30em;
-            min-width: 20em;
+            min-width: 10em;
             height: auto;
             display: block;
             margin: auto;
         }
         .cta {
             text-align: center;
-            padding-top: 4em;
+            padding-top: 50px;
         }
     }
 }
 
 .button {
     display: inline-block;
-    padding: 1em;
+    padding: 10px;
     text-transform: uppercase;
     background-color: $button-green;
     color: white;
