@@ -8,7 +8,7 @@
 
 
 body {
-    @media only screen and (min-device-width : 320px) {
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
         font-size: 40px;
     }
     font-size: 16px;
@@ -18,8 +18,8 @@ body {
     background: linear-gradient($bg-blue, $bg-purple);
     padding-bottom: 100px;
     .nav {
-        @media only screen and (min-device-width : 320px) {
-            font-size: 30px;
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        font-size: 30px;
         }
         text-align: center;
         max-width: 80em;
@@ -47,8 +47,8 @@ body {
         .logo {        
             display: inline;
             img {
-                @media only screen and (min-device-width : 320px) {
-                    font-size: 20px;
+                @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+                    font-size: 30px;
                 }
                 max-width: 10em;
                 padding: 10px;
@@ -86,8 +86,8 @@ body {
 }
 
 footer {
-    @media only screen and (min-device-width : 320px) {
-        font-size: 10px;
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        font-size: 20px;
     }
     position: relative;
     text-align: center;
