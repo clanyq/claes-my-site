@@ -10,12 +10,12 @@
     <h1>NEWS</h1>
      <ul>
     {% for item in news %}
-    	<div class='news-header'>
+    	<div>
            <div class='news-header'>
                 <a href="{{item.slug}}">{{ item.title }},</a>
                 <time>{{item.pubdate}}</time>
             </div>
-	         <li>{{ item.body|linebreaks }}</li>
+	         <p>{{ item.body|linebreaks }}</p>
         </div>
     {% endfor %}
     </ul>

@@ -10,9 +10,6 @@
     padding: 50px;
     margin: auto;
     max-width: 700px;
-
-
-
     h1{
         color: $feedheader;
         margin-bottom: 10px;
@@ -20,14 +17,17 @@
     }
     ul{
         list-style-type: none;
+        .press-header,
         .news-header{
-            
             a{
                 padding-right: 10px;
                 color: $feedtext;
                 text-decoration: none;
                 font-family: $standard-font;
             }
+        }
+        .press-header{
+            margin-bottom: 10px;            
         }
     }
     p{
