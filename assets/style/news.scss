@@ -16,7 +16,7 @@
         font-size: 2em;
     }
     ul{
-        margin-top: 70px;
+        margin-top: 50px;
         list-style-type: none;
         .press-header,
         .news-header{
@@ -26,6 +26,7 @@
                 text-decoration: none;
                 font-family: $standard-font;
                 font-size: 1.4em;
+
             }
             time{
                 color: $greytext;
@@ -37,6 +38,15 @@
     }
     p{
         margin-bottom: 20px;
+
+    } 
+    hr{
+        height:0; 
+        border:0; 
+        border-top:1px solid $feedborder; 
+        margin-top: 60px;
+        margin-bottom: 60px;
+
 
     }
     .read-more{
