@@ -1,77 +1,57 @@
 @import 'fonts.scss';
 @import 'colors.scss';
-
 @import 'all_news.scss';
 @import 'press.scss';
 @import 'news.scss';
 @import 'index.scss';
+@import 'reset.scss';
 
 
-
-body{
-
+body {
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
         font-size: 40px;
     }
     font-size: 16px;
     margin: 0;
 }
-
-
-.main-header{
-    
+.main-header {
     background: linear-gradient($bg-blue, $bg-purple);
-    .nav{
+    padding-bottom: 20em;
+    .nav {
         text-align: center;
         max-width: 80em;
-        display: table;      
+        display: table;
         width: 100%;
         margin: auto;
         text-transform: uppercase;
         font-family: $branding-font;
-
-         .logo {
+        ul {
+            margin: 0;
+            li {
+                color: white;
+                list-style-type: none;
+                display: inline-block;
+                padding: 5px 10px;
+            }
+        }
+        .logo,
+        .main-nav,
+        .about-nav {
             vertical-align: middle;
             display: inline;
-             img {
+            display: table-cell;
+        }
+        .logo {        
+            display: inline;
+            img {
                 max-width: 10em;
                 padding: 0.5em;
-             }
-            }
-
-        .main-nav{
-            vertical-align: middle;
-            display: table-cell;
-            ul{
-                margin: 0;                         
-                li{
-                    color: white;
-                    list-style-type: none;
-                    display: inline-block;
-                    padding: 5px 10px;
-                }
             }
         }
-        .about-nav{
-            vertical-align: middle;
-            display: table-cell;   
-            ul {  
-            margin: 0;      
-             li {
-                    color: white;
-                    list-style-type: none;
-                    display: inline-block;
-                    padding: 5px 10px;
-                    }
-                }     
-            }
-        }
-
+    }
     .jumbotron {
-        height: 45em;
-        width: 100%;
 
-        .carousel{
+        .carousel {
             padding-top: 6em;
             text-align: center;
             width: 30%;
@@ -80,43 +60,28 @@ body{
             height: auto;
             display: block;
             margin: auto;
-
         }
-        .button{
+        .cta {
             text-align: center;
             padding-top: 4em;
-
-
-            .buttonstart {
-                width: 7em;
-                height: 5em;
-                text-transform: uppercase;
-                background-color: $button-green;
-                color: white;
-                font-family: $branding-font;
-                font-weight: bold;
-                border: 0px;
-          }
-        
+        }
     }
-    }
-
 }
 
-
+.button {
+    display: inline-block;
+    padding: 1em;
+    text-transform: uppercase;
+    background-color: $button-green;
+    color: white;
+    font-family: $branding-font;
+    font-weight: bold;
+    border: 0px;
+}
 
 footer {
     position: relative;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
     text-align: center;
     color: $feedheader;
     font-family: $standard-font;
-
-
 }
-
-
-

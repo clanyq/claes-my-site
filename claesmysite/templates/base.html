@@ -36,9 +36,9 @@
             </div>
             <div class="jumbotron">
                 <div>
-                    <img class="carousel" src="media/images/balloon.png">
-                    <div class="button">
-                        <button class="buttonstart">get started</button>
+                    <img class="carousel" src="{% static 'images/balloon.png' %}">
+                    <div class="cta">
+                        <button class="button">get started</button>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
         {% block content %}{% endblock %}
 
         {% compress js %}
-        <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
+            <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
         {% endcompress %}
 
     </body>
