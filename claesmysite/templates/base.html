@@ -10,6 +10,7 @@
 
         {% compress css %}
         <link rel="stylesheet" href="{% static 'style/main.scss' %}" type="text/x-scss" media="screen">
+        <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}"/>
         {% endcompress %}
     </head>
 
@@ -37,7 +38,13 @@
             <div class="jumbotron">
                 <div>
                     <h1 class='jumbotron-title'>Claes makes a mean website</h1>
-                    <img class="carousel" src="{% static 'images/balloon.png' %}">
+                        <div class="carousel">
+                            <div class="slider">
+                              <div><img src="http://placehold.it/350x150/E0E0E0"></div>
+                              <div><img src="http://placehold.it/350x150/A0E0E0"></div>
+                              <div><img src="http://placehold.it/350x150/B0A0E0"></div>
+                            </div>
+                        </div>
                     <div class="cta">
                         <p>Claes is an exceptionale young man that is going to have done this on time. If he succeeds he will get, not one, but two cookies. if it runs on my computer he will get three
                         </p>
@@ -50,11 +57,13 @@
         {% block content %}{% endblock %}
 
         {% compress js %}
-            <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
+        <script src="{% static 'script/lib/jquery-3.1.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'slick/slick.js' %}"></script>
+        <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
         {% endcompress %}
 
     </body>
     <footer>
-            See you in a couple of days! :D
+        See you in a couple of days! :D
     </footer>
 </html>
