@@ -6,9 +6,6 @@ $(document).ready(function(){
         infinite: false,
         slidesToShow: 1,
         dots: false,
-
-
-
-       
+   
   });
 });
