@@ -37,6 +37,7 @@ class Press(models.Model):
     class Meta:
         verbose_name_plural = 'Press'
 
+
 class Image(models.Model):
 
     imgfile = models.ImageField(upload_to='images/')
