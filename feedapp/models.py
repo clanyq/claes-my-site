@@ -40,8 +40,7 @@ class Press(models.Model):
 class Image(models.Model):
 
     imgfile = models.ImageField(upload_to='images/')
-    image_height = models.PositiveIntegerField(null=True, blank=True, editable=False, default="360")
-    image_width = models.PositiveIntegerField(null=True, blank=True, editable=False, default="480")
+    
 
     def __str__(self):
         return (str(self.imgfile))

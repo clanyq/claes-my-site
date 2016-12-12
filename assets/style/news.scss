@@ -2,58 +2,63 @@
 
 
 .news{
+    
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
         font-size: 30px;
     }
+
     position: relative;
     display: block;
     padding: 50px;
     margin: auto;
     max-width: 700px;
     font-family: $standard-font;
+
     h1{
         color: $feedheader;
         margin-bottom: 10px;
         font-size: 2em;
     }
+
     ul{
         margin-top: 50px;
         list-style-type: none;
         .press-header,
         .news-header{
+
             a{
                 padding-right: 10px;
                 color: $feedtext;
                 text-decoration: none;
                 font-family: $standard-font;
                 font-size: 1.4em;
-
             }
+
             time{
                 color: $greytext;
             }
         }
+
         .press-header{
             margin-bottom: 10px;            
         }
     }
-    p{
-        margin-bottom: 20px;
 
-    } 
-    hr{
+    p {
+        margin-bottom: 20px;
+    }
+
+    hr {
         height:0; 
         border:0; 
         border-top:1px solid $feedborder; 
         margin-top: 60px;
         margin-bottom: 60px;
-
-
     }
+
     .read-more{
-            text-decoration: none;
-        
-        }
+            text-decoration: none;  
+    }
 }
 
 

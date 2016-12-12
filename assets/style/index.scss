@@ -1,4 +1,4 @@
-.index-header{
+.index-header {
     font-family: $standard-font;
     font-weight: bold;
     font-size: 1.5em;
@@ -16,12 +16,12 @@
     padding-bottom: 75px;
     font-weight: bold;
 
-    
     .feed {
         display: table-cell;
         padding: 25px 30px;
         width: 400px;
         min-width: 300px;
+
         @media (min-width : 320px) and (max-width : 480px) {
             display: block;
             width: 400px;
@@ -31,33 +31,37 @@
             display: inline;
             text-decoration: none;
             color: $feedheader;
+        }
 
-           }
         .see_all {
             font-size: 0.7em;
             float: right;
             text-decoration: none;
             color: $greytext;
         }
-        ul{
+
+        ul {
             list-style-type: none;
             padding-left: 0;
             border-top: 1px solid $feedborder;
             margin-top: 10px;
             font-size: 0.8em;
-            li{
+            
+            li {
                 list-decoration: none;
-                padding-top: 10px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+               
                 a {
                     
                     text-decoration: none;
                     display: block;
                     color: $feedtext;
                 }
+               
                 time {
                     font-weight: normal;
                     color: $greytext;
-                    
                 }
             }
         }

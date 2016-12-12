@@ -5,25 +5,26 @@
 @import 'reset.scss';
 @import 'slick-theme.scss';
 
-
-
 body {
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
         font-size: 28px;
     }
     font-size: 16px;
     margin: 0;
-
 }
+
 .main-header {
     background: linear-gradient($bg-blue, $bg-purple);
     padding-bottom: 100px;
     color: white;
     font-family: $branding-font;
+    
     .nav {
+
         @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-        font-size: 28px;
+            font-size: 28px;
         }
+
         text-align: center;
         display: table;
         margin: auto;
@@ -34,8 +35,10 @@ body {
         margin-bottom: 50px;
         max-width: 1500px;
         width: 100%;
+
         ul {
             margin: 0;
+            
             li {
                 color: white;
                 list-style-type: none;
@@ -43,6 +46,7 @@ body {
                 padding: 5px 10px;
             }
         }
+        
         .logo,
         .main-nav,
         .about-nav {
@@ -51,9 +55,10 @@ body {
             display: table-cell;
             
         }
+        
         .logo { 
             text-align: left;       
-            img {
+             img {
                 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
                     font-size: 20px;
                 }
@@ -61,32 +66,34 @@ body {
                 padding: 10px;
             }
         }
+        
         .main-nav { 
-           text-align: center;
-           
-       }
+           text-align: center;    
+        }
+        
         .about-nav {
             text-align: right;
         }
-
+       
        .logo,
        .about-nav {
-           width: 300px;
-           
+           width: 300px;    
        }
     }
+    
     .jumbotron {
         @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
             font-size: 16px;
         }
         text-align: center;
         margin: auto;
+        
         .jumbotron-title{
             font-size: 1.8em;
             font-family: $branding-font;
             font-weight: bold;
         }
-
+        
         .carousel {
             padding-top: 80px;
             text-align: center;
@@ -96,11 +103,13 @@ body {
             height: auto;
             margin: auto;
         }
+        
         .cta {
             text-align: center;
             padding-top: 50px;
         }
-        p{
+        
+        p {
             max-width: 700px;
             margin: auto;
             line-height: 150%;
@@ -120,7 +129,6 @@ body {
     font-weight: bold;
     border-radius: 3px;
 }
-
 
 footer {
     position: relative;

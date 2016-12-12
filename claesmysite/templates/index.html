@@ -2,13 +2,8 @@
 {% load staticfiles %}
 {% load static %}
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>TEstt</title>
 </head>
 <body>
-
 {% block content %}
 <h1 class='index-header'>Welcome to this awesome site!</h1>
 <div class="feed-container">
@@ -19,10 +14,9 @@
         {% for press in output_press %}
             <li>
                 <a href="{{press.url}}">{{press.title}}</a>
-                <time>{{press.source}} - {{press.pubdate}}</time>
+                <time>{{press.source}} — {{press.pubdate}}</time>
             </li>
-
-            {% endfor %}
+        {% endfor %}
         </ul>
     </div>
     <div class="feed">
@@ -38,9 +32,7 @@
         </ul>
     </div>
 </div>
-
 {% endblock %}
-
 </body>
 
 </html>
