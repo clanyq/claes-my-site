@@ -1,3 +1,5 @@
+@import 'breakpoints.scss';
+
 .index-header {
     font-family: $standard-font;
     font-weight: bold;
@@ -22,9 +24,10 @@
         width: 400px;
         min-width: 300px;
 
-        @media (min-width : 320px) and (max-width : 480px) {
+        @media (max-width: $breakpoint-m) {
             display: block;
-            width: 400px;
+            width: 600px;
+            font-size: 2em;
         }
 
         .title {

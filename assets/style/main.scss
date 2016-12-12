@@ -7,7 +7,7 @@
 
 
 body {
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    @media (max-width: $breakpoint-xs) {
         font-size: 28px;
     }
     font-size: 16px;
@@ -22,10 +22,7 @@ body {
     
     .nav {
 
-        @media (max-width: $breakpoint-xs) {
-            font-size: 28px;
-        }
-
+ 
         text-align: center;
         display: table;
         margin: auto;
@@ -51,18 +48,28 @@ body {
         .logo,
         .main-nav,
         .about-nav {
+            
+            @media (max-width: $breakpoint-m) {
+                display: none;
+            }
+            
             vertical-align: middle;
             display: inline-block;
             display: table-cell;
             
         }
         
-        .logo { 
+        .logo {
+            
+            @media (max-width: $breakpoint-m) {
+                vertical-align: middle;
+                display: inline-block;
+                text-align: center;
+                font-size: 2em;
+            } 
+            
             text-align: left;       
              img {
-                @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-                    font-size: 20px;
-                }
                 width: 7em;
                 padding: 10px;
             }
@@ -83,7 +90,7 @@ body {
     }
     
     .jumbotron {
-        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        @media (max-width: $breakpoint-xs) {
             font-size: 16px;
         }
         text-align: center;
