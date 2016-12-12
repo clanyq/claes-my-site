@@ -13,8 +13,7 @@ body {
     }
     font-size: 16px;
     margin: 0;
-    //fraga Gustaf om ratt att anvanda
-    overflow-y: scroll;
+
 }
 .main-header {
     background: linear-gradient($bg-blue, $bg-purple);
@@ -29,7 +28,7 @@ body {
         display: table;
         margin: auto;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 16px;
         font-family: $branding-font;
         font-weight: bold;
         margin-bottom: 50px;
@@ -50,10 +49,10 @@ body {
             vertical-align: middle;
             display: inline-block;
             display: table-cell;
-            text-align: middle;
+            
         }
-        .logo {        
-            display: inline-block;
+        .logo { 
+            text-align: left;       
             img {
                 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
                     font-size: 20px;
@@ -62,6 +61,19 @@ body {
                 padding: 10px;
             }
         }
+        .main-nav { 
+           text-align: center;
+           
+       }
+        .about-nav {
+            text-align: right;
+        }
+
+       .logo,
+       .about-nav {
+           width: 300px;
+           
+       }
     }
     .jumbotron {
         @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -117,3 +129,4 @@ footer {
     font-family: $standard-font;
     color: $greytext;
 }
+

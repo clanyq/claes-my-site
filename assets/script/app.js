@@ -6,9 +6,7 @@ $(document).ready(function(){
         infinite: false,
         slidesToShow: 1,
         dots: false,
-        variableHeight: true,
-        variableWidth: true,
-        centerMode: true,
+
 
        
   });

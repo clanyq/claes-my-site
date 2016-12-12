@@ -41,9 +41,9 @@
                     <h1 class='jumbotron-title'>Claes makes a mean website</h1>
                         <div class="carousel">
                             <div class="slider">
-                              <div><img src="http://placehold.it/350x150/E0E0E0"></div>
-                              <div><img src="http://placehold.it/350x150/A0E0E0"></div>
-                              <div><img src="http://placehold.it/350x150/B0A0E0"></div>
+                                {% for img in images %}
+                              <div><img src="{{img.imgfile.url}}"/></div>
+                                {% endfor %}
                             </div>
                         </div>
                     <div class="cta">

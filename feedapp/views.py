@@ -8,10 +8,12 @@ from feedapp.models import News, Press, Image
 def index(request):
     latest_press_list = Press.objects.order_by('-pubdate')[:3]
     latest_news_list = News.objects.order_by('-pubdate')[:3]
+    image = Image.objects.all()
 
 
     return render(request, 'index.html', {'output_press': latest_press_list,
-                                          'output_news': latest_news_list})
+                                          'output_news': latest_news_list,
+                                          'images': image})
 
 
 def all_news(request):
