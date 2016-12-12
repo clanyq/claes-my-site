@@ -7,11 +7,6 @@
     <head>
         <meta charset="utf-8">
         <title>Claes</title>
-        {% compress js %}
-        <script src="{% static 'script/lib/jquery-3.1.1.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
-        {% endcompress %}
 
         {% compress css %}
         <link rel="stylesheet" href="{% static 'style/main.scss' %}" type="text/x-scss" media="screen">
@@ -61,10 +56,14 @@
         </div>
         {% block content %}{% endblock %}
 
-
-
-    </body>
     <footer>
         See you in a couple of days! :D
     </footer>
+        {% compress js %}
+        <script src="{% static 'script/lib/jquery-3.1.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
+        {% endcompress %}
+    </body>
+
 </html>
