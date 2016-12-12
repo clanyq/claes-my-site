@@ -5,7 +5,11 @@ $(document).ready(function(){
         arrows: true,
         infinite: false,
         slidesToShow: 1,
-        dots: true,
+        dots: false,
+        variableHeight: true,
+        variableWidth: true,
+        centerMode: true,
+
        
   });
 });

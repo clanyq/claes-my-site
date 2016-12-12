@@ -50,6 +50,7 @@ body {
             vertical-align: middle;
             display: inline-block;
             display: table-cell;
+            text-align: middle;
         }
         .logo {        
             display: inline-block;
@@ -78,6 +79,9 @@ body {
             padding-top: 80px;
             text-align: center;
             width: 40%;
+            max-width: 30em;
+            min-width: 10em;
+            height: auto;
             margin: auto;
         }
         .cta {
