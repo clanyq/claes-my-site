@@ -26,7 +26,7 @@ body {
         width: 100%;
 
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 600;
         text-align: center;
 
         ul {
@@ -89,7 +89,7 @@ body {
         
         .jumbotron-title{
             font-size: 2.2em;
-            font-weight: 900;
+            font-weight: 700;
         }
         
         .carousel {
@@ -102,11 +102,12 @@ body {
         }
 
         p {
-            max-width: 600px;
+            max-width: 800px;
             margin: auto;
             line-height: 180%;
             margin-bottom: 40px;
-            font-weight: 500;
+
+            font-family: $standard-font;
         }
 
         .cta {
@@ -118,7 +119,7 @@ body {
 
 .button {
     display: inline-block;
-    padding: 13px 28px;
+    padding: 14px 26px;
     text-transform: uppercase;
     background-color: $button-green;
     border: 0px;

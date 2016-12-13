@@ -1,7 +1,8 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.template import RequestContext
 
-
+from feedapp.context_processor import image_list
 from feedapp.models import News, Press, Image
 
 
@@ -9,13 +10,10 @@ from feedapp.models import News, Press, Image
 def index(request):
     latest_press_list = Press.objects.order_by('-pubdate')
     latest_news_list = News.objects.order_by('-pubdate')
-    image = Image.objects.all()
 
-
-    return render(request, 'index.html',{
+    return render(request, 'index.html', {
         'output_press': latest_press_list,
-        'output_news': latest_news_list,
-        'images': image,
+        'output_news' : latest_news_list,
         })
 
 
