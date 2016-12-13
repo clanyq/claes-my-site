@@ -23,8 +23,7 @@ def all_news(request):
     image = Image.objects.all()
 
     return render(request, 'all_news.html', {
-                                                'news': news, 
-                                                'images': image
+                                                'news': news,
                                             })
 
 
@@ -33,8 +32,7 @@ def press(request):
     image = Image.objects.all()
 
     return render(request, 'press.html', {
-                                            'press': press, 
-                                            'images': image
+                                            'press': press,
                                           })
 
 
@@ -44,7 +42,6 @@ def show_news(request, news_name_slug):
 
     return render(request, 'news.html', {
                                             'news': slug, 
-                                            'images': image
                                         })
 
 
