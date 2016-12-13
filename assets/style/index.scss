@@ -3,7 +3,7 @@
 .index-header {
     margin: auto;
     max-width: 500px;
-    padding: 50px;
+    padding: 30px;
 
     text-align: center;
     font-family: $branding-font;
@@ -14,8 +14,8 @@
 
 .feed-container {
     display: table;
-    margin: auto;
     padding-bottom: 75px;
+
 
     font-family: $standard-font;
     font-weight: bold;
@@ -51,7 +51,7 @@
             list-style-type: none;
             padding-left: 0;
             border-top: 1px solid $feedborder;
-            margin-top: 10px;            
+            margin-top: 10px;
             
             li {
                 list-decoration: none;
