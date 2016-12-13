@@ -1,7 +1,7 @@
 @import 'fonts.scss';
 
 
-.news {  
+.news {
     position: relative;
     display: block;
     padding: 50px;
@@ -25,7 +25,7 @@
             a {
                 padding-right: 10px;
                 color: $feedtext;
-                text-decoration: none;              
+                text-decoration: none;
                 font-size: 1.4em;
             }
 
@@ -35,7 +35,7 @@
         }
 
         .press-header{
-            margin-bottom: 10px;            
+            margin-bottom: 10px;
         }
     }
 
@@ -44,15 +44,15 @@
     }
 
     hr {
-        height:0; 
-        border:0; 
-        border-top:1px solid $feedborder; 
+        height:0;
+        border:0;
+        border-top:1px solid $feedborder;
         margin-top: 60px;
         margin-bottom: 60px;
     }
 
     .read-more {
-        text-decoration: none;  
+        text-decoration: none;
     }
 }
 
@@ -64,8 +64,8 @@
 
     .step-links {
 
-        a{
-            text-decoration: none; 
+        a {
+            text-decoration: none;
         }
 
         .current {

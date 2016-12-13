@@ -13,10 +13,10 @@ def index(request):
 
 
     return render(request, 'index.html',{
-                                            'output_press': latest_press_list,
-                                            'output_news': latest_news_list,
-                                            'images': image,
-                                        })
+        'output_press': latest_press_list,
+        'output_news': latest_news_list,
+        'images': image,
+        })
 
 
 def news_list(request):
@@ -35,8 +35,8 @@ def news_list(request):
         news = paginator.page(paginator.num_pages)
 
     return render(request, 'news_list.html', {
-                                                'news': news,
-                                            })
+        'news': news,
+        })
 
 
 def press_list(request):
@@ -55,16 +55,16 @@ def press_list(request):
         press = paginator.page(paginator.num_pages)
 
     return render(request, 'press_list.html', {
-                                                    'press': press,
-                                                })
+        'press': press,
+        })
 
 
 def news_detail(request, news_name_slug):
     slug = News.objects.get(slug=news_name_slug)
 
     return render(request, 'news_detail.html', {
-                                                    'news': slug, 
-                                                })
+        'news': slug,
+        })
 
 
 

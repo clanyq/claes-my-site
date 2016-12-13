@@ -36,7 +36,6 @@ class Press(models.Model):
 class Image(models.Model):
 
     imgfile = models.ImageField(upload_to='images/')
-    
 
     def __str__(self):
         return (str(self.imgfile))

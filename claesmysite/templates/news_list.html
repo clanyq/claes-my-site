@@ -5,7 +5,7 @@
 <div class="news">
     <h1>NEWS</h1>
      <ul>
-    {% for item in news|slice:":5" %}
+    {% for item in news %}
     	<div>
            <div class='news-header'>
                 <a href="{{ item.slug }}">{{ item.title }},</a>

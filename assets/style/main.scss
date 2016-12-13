@@ -16,7 +16,7 @@ body {
     padding-bottom: 120px;
     color: white;
     font-family: $branding-font;
-    
+
     .nav {
 
         display: table;
@@ -41,7 +41,7 @@ body {
         
         .logo,
         .main-nav,
-        .about-nav {           
+        .about-nav {
             vertical-align: middle;
             display: inline-block;
             display: table-cell;
@@ -49,10 +49,9 @@ body {
             @media (max-width: $breakpoint-m) {
                 display: none;
             }
-            
         }
-        
-        .logo {           
+
+        .logo {
             text-align: left;
 
             @media (max-width: $breakpoint-m) {
@@ -61,7 +60,7 @@ body {
                 padding-top: 25px;
 
                 text-align: center;
-            } 
+            }
 
              img {
                 width: 7em;
@@ -69,8 +68,8 @@ body {
             }
         }
         
-        .main-nav { 
-           text-align: center;    
+        .main-nav {
+           text-align: center;
         }
         
         .about-nav {
@@ -80,10 +79,10 @@ body {
        
        .logo,
        .about-nav {
-           width: 300px;    
+           width: 300px;
        }
     }
-    
+
     .jumbotron {
         text-align: center;
         margin: auto;
@@ -109,7 +108,7 @@ body {
             margin-bottom: 40px;
             font-weight: 500;
         }
-        
+
         .cta {
             text-align: center;
             padding-top: 70px;
