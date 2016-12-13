@@ -11,30 +11,41 @@ def index(request):
     image = Image.objects.all()
 
 
-    return render(request, 'index.html', {'output_press': latest_press_list,
-                                          'output_news': latest_news_list,
-                                          'images': image})
+    return render(request, 'index.html',{
+                                            'output_press': latest_press_list,
+                                            'output_news': latest_news_list,
+                                            'images': image
+                                        })
 
 
 def all_news(request):
     news = News.objects.order_by('-pubdate')[:5]
     image = Image.objects.all()
 
-    return render(request, 'all_news.html', {'news': news, 'images': image})
+    return render(request, 'all_news.html', {
+                                                'news': news, 
+                                                'images': image
+                                            })
 
 
 def press(request):
     press = Press.objects.order_by('-pubdate')[:5]
     image = Image.objects.all()
 
-    return render(request, 'press.html', {'press': press, 'images': image})
+    return render(request, 'press.html', {
+                                            'press': press, 
+                                            'images': image
+                                          })
 
 
 def show_news(request, news_name_slug):
     slug = News.objects.get(slug=news_name_slug)
     image = Image.objects.all()
 
-    return render(request, 'news.html', {'news': slug, 'images': image})
+    return render(request, 'news.html', {
+                                            'news': slug, 
+                                            'images': image
+                                        })
 
 
 

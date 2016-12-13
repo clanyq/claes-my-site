@@ -13,10 +13,6 @@ class News(models.Model):
     pubdate = models.DateField(auto_now_add=True)
     slug = models.SlugField(unique=True, blank=True)
 
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        super(News, self).save(*args, **kwargs)
-
     def __str__(self):
         return(self.title)
 

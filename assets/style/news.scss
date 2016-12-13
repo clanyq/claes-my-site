@@ -1,12 +1,7 @@
 @import 'fonts.scss';
 
 
-.news{
-    
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-        font-size: 30px;
-    }
-
+.news{  
     position: relative;
     display: block;
     padding: 50px;
