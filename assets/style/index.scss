@@ -3,7 +3,7 @@
 .index-header {
     margin: auto;
     max-width: 500px;
-    padding: 30px;
+    padding: 25px;
 
     text-align: center;
     font-family: $branding-font;
@@ -22,7 +22,7 @@
 
     .feed {
         display: table-cell;
-        padding: 25px 30px;
+        padding: 60px 30px;
         width: 400px;
 
         @media (max-width: $breakpoint-tablet) {
