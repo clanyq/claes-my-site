@@ -14,7 +14,7 @@ def index(request):
     return render(request, 'index.html',{
                                             'output_press': latest_press_list,
                                             'output_news': latest_news_list,
-                                            'images': image
+                                            'images': image,
                                         })
 
 

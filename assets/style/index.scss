@@ -24,12 +24,12 @@
         display: table-cell;
         padding: 25px 30px;
         width: 400px;
-        min-width: 300px;
 
-        @media (max-width: $breakpoint-m) {
+        @media (max-width: $breakpoint-tablet) {
             display: block;
-            width: 600px;
-            font-size: 2em;
+            width: 100%;
+            padding: 25px 0px;
+
         }
 
         .title {
@@ -44,14 +44,14 @@
             float: right;
             text-decoration: none;
             color: $greytext;
+
         }
 
         ul {
             list-style-type: none;
             padding-left: 0;
             border-top: 1px solid $feedborder;
-            margin-top: 10px;
-            
+            margin-top: 10px;            
             
             li {
                 list-decoration: none;
