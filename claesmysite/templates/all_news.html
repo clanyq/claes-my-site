@@ -8,11 +8,11 @@
     {% for item in news|slice:":5" %}
     	<div>
            <div class='news-header'>
-                <a href="{{item.slug}}">{{ item.title }},</a>
-                <time>{{item.pubdate}}</time>
+                <a href="{{ item.slug }}">{{ item.title }},</a>
+                <time>{{ item.pubdate }}</time>
             </div>
 	         <p>
-                {{ item.body|linebreaks|truncatewords:100 }}<a class='read-more' href="{{item.slug}}">Read more</a>
+                {{ item.body|linebreaks|truncatewords:100 }}<a class='read-more' href="{{ item.slug }}">Read more</a>
              </p>
              <hr width="50%">
         </div>
