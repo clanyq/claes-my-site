@@ -6,8 +6,8 @@ from feedapp.models import News, Press, Image
 
 
 def index(request):
-    latest_press_list = Press.objects.order_by('-pubdate')[:3]
-    latest_news_list = News.objects.order_by('-pubdate')[:3]
+    latest_press_list = Press.objects.order_by('-pubdate')
+    latest_news_list = News.objects.order_by('-pubdate')
     image = Image.objects.all()
 
 
@@ -19,7 +19,7 @@ def index(request):
 
 
 def all_news(request):
-    news = News.objects.order_by('-pubdate')[:5]
+    news = News.objects.order_by('-pubdate')
     image = Image.objects.all()
 
     return render(request, 'all_news.html', {
@@ -28,7 +28,7 @@ def all_news(request):
 
 
 def press(request):
-    press = Press.objects.order_by('-pubdate')[:5]
+    press = Press.objects.order_by('-pubdate')
     image = Image.objects.all()
 
     return render(request, 'press.html', {

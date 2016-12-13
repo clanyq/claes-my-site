@@ -11,7 +11,7 @@
         <h3 class="title">Press</h3>
         <a class="see_all" href="/press">See all</a>
         <ul>
-        {% for press in output_press %}
+        {% for press in output_press|slice:":3" %}
             <li>
                 <a href="{{press.url}}">{{press.title}}</a>
                 <time>{{press.source}} — {{press.pubdate}}</time>
@@ -23,7 +23,7 @@
         <h3 class="title">News</h3>
         <a class="see_all"href="/news">See all</a>
         <ul>
-        {% for news in output_news %}
+        {% for news in output_news|slice:":3" %}
             <li>
                 <a href="/news/{{news.slug}}">{{ news.title }}</a>
                 <time>{{ news.pubdate }}</time>
