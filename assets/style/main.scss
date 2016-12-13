@@ -19,14 +19,15 @@ body {
     
     .nav {
 
-        text-align: center;
         display: table;
         margin: auto;
-        text-transform: uppercase;
-        font-weight: bold;
         margin-bottom: 50px;
         max-width: 1500px;
         width: 100%;
+
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
 
         ul {
             margin: 0;
@@ -57,6 +58,7 @@ body {
             @media (max-width: $breakpoint-m) {
                 vertical-align: middle;
                 display: inline-block;
+
                 text-align: center;
                 font-size: 2em;
             } 
@@ -93,11 +95,11 @@ body {
         
         .carousel {
             padding-top: 80px;
-            text-align: center;
+            margin: auto;
+
             width: 40%;
             max-width: 30em;
             min-width: 10em;
-            margin: auto;
         }
 
         p {
@@ -125,10 +127,11 @@ body {
     text-transform: uppercase;
     background-color: $button-green;
     border: 0px;
+    border-radius: 3px;
+
     color: white;
     font-family: $branding-font;
     font-weight: bold;
-    border-radius: 3px;
     letter-spacing: 1.2px;
 }
 

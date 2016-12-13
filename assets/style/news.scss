@@ -23,14 +23,14 @@
     ul{
         margin-top: 50px;
         list-style-type: none;
+
         .press-header,
         .news-header{
 
             a{
                 padding-right: 10px;
                 color: $feedtext;
-                text-decoration: none;
-                font-family: $standard-font;
+                text-decoration: none;              
                 font-size: 1.4em;
             }
 

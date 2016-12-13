@@ -1,21 +1,23 @@
 @import 'breakpoints.scss';
 
 .index-header {
+    margin: auto;
+    max-width: 500px;
+    padding: 50px;
+
+    text-align: center;
     font-family: $standard-font;
     font-weight: bold;
     font-size: 1.5em;
     color: $darkgreytext;
-    text-align: center;
-    margin: auto;
-    max-width: 500px;
-    padding: 50px;
 }
 
 .feed-container {
-    font-family: $standard-font;
     display: table;
     margin: auto;
     padding-bottom: 75px;
+
+    font-family: $standard-font;
     font-weight: bold;
 
     .feed {
