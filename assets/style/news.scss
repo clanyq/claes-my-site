@@ -1,7 +1,7 @@
 @import 'fonts.scss';
 
 
-.news{  
+.news {  
     position: relative;
     display: block;
     padding: 50px;
@@ -9,27 +9,27 @@
     max-width: 700px;
     font-family: $standard-font;
 
-    h1{
+    h1 {
         color: $feedheader;
         margin-bottom: 10px;
         font-size: 2em;
     }
 
-    ul{
+    ul {
         margin-top: 50px;
         list-style-type: none;
 
         .press-header,
-        .news-header{
+        .news-header {
 
-            a{
+            a {
                 padding-right: 10px;
                 color: $feedtext;
                 text-decoration: none;              
                 font-size: 1.4em;
             }
 
-            time{
+            time {
                 color: $greytext;
             }
         }
@@ -51,8 +51,26 @@
         margin-bottom: 60px;
     }
 
-    .read-more{
-            text-decoration: none;  
+    .read-more {
+        text-decoration: none;  
+    }
+}
+
+.pagination {
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+    font-family: $standard-font;
+
+    .step-links {
+
+        a{
+            text-decoration: none; 
+        }
+
+        .current {
+
+        }
     }
 }
 
