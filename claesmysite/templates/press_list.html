@@ -15,6 +15,21 @@
     {% endfor %}
     </ul>
 </div>
+<div class="pagination">
+    <span class="step-links">
+        {% if press.has_previous %}
+            <a href="?page={{ press.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ press.number }} of {{ press.paginator.num_pages }}
+        </span>
+
+        {% if press.has_next %}
+            <a href="?page={{ press.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
 </body>
 </html>
 {% endblock %}

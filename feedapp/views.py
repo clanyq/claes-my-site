@@ -1,4 +1,5 @@
 from django.shortcuts import render, render_to_response
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 from feedapp.models import News, Press, Image
@@ -20,7 +21,18 @@ def index(request):
 
 def news_list(request):
     news = News.objects.order_by('-pubdate')
-    image = Image.objects.all()
+    paginator = Paginator(news, 5)
+
+    page = request.GET.get('page')
+
+    try:
+        news = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        news = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        news = paginator.page(paginator.num_pages)
 
     return render(request, 'news_list.html', {
                                                 'news': news,
@@ -29,7 +41,18 @@ def news_list(request):
 
 def press_list(request):
     press = Press.objects.order_by('-pubdate')
-    image = Image.objects.all()
+    paginator = Paginator(press, 5)
+
+    page = request.GET.get('page')
+    
+    try:
+        press = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        press = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        press = paginator.page(paginator.num_pages)
 
     return render(request, 'press_list.html', {
                                                     'press': press,
@@ -38,7 +61,6 @@ def press_list(request):
 
 def news_detail(request, news_name_slug):
     slug = News.objects.get(slug=news_name_slug)
-    image = Image.objects.all()
 
     return render(request, 'news_detail.html', {
                                                     'news': slug, 

@@ -26,7 +26,6 @@ class Press(models.Model):
     source = models.CharField(max_length=50)
     pubdate = models.DateField(auto_now_add=True)
 
-
     def __str__(self):
         return(self.title)
 
