@@ -1,10 +1,6 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<html lang="en">
-<head>
- <meta charset="UTF-8">
- <title>Title</title>
-</head>
 <body>
 <div class="news">
     <h1>NEWS</h1>
@@ -15,7 +11,9 @@
                 <a href="{{item.slug}}">{{ item.title }},</a>
                 <time>{{item.pubdate}}</time>
             </div>
-	         <p>{{ item.body|linebreaks|truncatewords:100 }}<a class='read-more' href="{{item.slug}}">Read more</a></p>
+	         <p>
+                {{ item.body|linebreaks|truncatewords:100 }}<a class='read-more' href="{{item.slug}}">Read more</a>
+             </p>
              <hr width="50%">
         </div>
     {% endfor %}
@@ -24,26 +22,3 @@
 </body>
 </html>
 {% endblock %}
-
-
-
-<!-- 
-
-<html lang="en">
-<head>
- <meta charset="UTF-8">
- <title>Title</title>
-</head>
-<body>
-<div class="all_news">
-    <h1>NEWS</h1>
-     <ul>
-    {% for item in news %}
-         <li><a href="{{item.slug}}">{{ item.title }}</a></li>
-         <li>{{ item.pubdate }}</li>
-         <li>{{ item.body|linebreaks }}</li>
-    {% endfor %}
-    </ul>
-</div>
-</body>
-</html> -->

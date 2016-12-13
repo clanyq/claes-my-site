@@ -19,13 +19,10 @@ body {
     
     .nav {
 
- 
         text-align: center;
         display: table;
         margin: auto;
         text-transform: uppercase;
-        font-size: 16px;
-        font-family: $branding-font;
         font-weight: bold;
         margin-bottom: 50px;
         max-width: 1500px;
@@ -35,7 +32,6 @@ body {
             margin: 0;
             
             li {
-                color: white;
                 list-style-type: none;
                 display: inline-block;
                 padding: 5px 10px;
@@ -92,7 +88,6 @@ body {
         
         .jumbotron-title{
             font-size: 1.8em;
-            font-family: $branding-font;
             font-weight: bold;
         }
         
@@ -106,7 +101,7 @@ body {
         }
 
         p {
-            max-width: 700px;
+            max-width: 600px;
             margin: auto;
             line-height: 150%;
             margin-bottom: 40px;
@@ -120,9 +115,11 @@ body {
 }
 
 .button {
+
     @media (max-width: $breakpoint-m) {
         font-size: 1.5em;
     }
+
     display: inline-block;
     padding: 10px;
     text-transform: uppercase;

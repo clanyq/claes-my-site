@@ -47,7 +47,7 @@ class Image(models.Model):
         return (str(self.imgfile))
 
 
-@receiver(pre_delete, sender=Image)
-def image_delete(sender, instance, **kwargs):
+# @receiver(pre_delete, sender=Image)
+# def image_delete(sender, instance, **kwargs):
 
-    instance.imgfile.delete(False)
+#     instance.imgfile.delete(False)
