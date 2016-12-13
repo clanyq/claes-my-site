@@ -6,9 +6,9 @@
     padding: 50px;
 
     text-align: center;
-    font-family: $standard-font;
-    font-weight: bold;
-    font-size: 1.5em;
+    font-family: $branding-font;
+    font-weight: 900;
+    font-size: 2em;
     color: $darkgreytext;
 }
 
@@ -36,10 +36,11 @@
             display: inline;
             text-decoration: none;
             color: $feedheader;
+            font-size: 1.2em;
         }
 
         .see_all {
-            font-size: 0.7em;
+            font-size: 1em;
             float: right;
             text-decoration: none;
             color: $greytext;
@@ -50,7 +51,7 @@
             padding-left: 0;
             border-top: 1px solid $feedborder;
             margin-top: 10px;
-            font-size: 0.8em;
+            
             
             li {
                 list-decoration: none;

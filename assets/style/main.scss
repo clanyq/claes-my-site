@@ -13,7 +13,7 @@ body {
 
 .main-header {
     background: linear-gradient($bg-blue, $bg-purple);
-    padding-bottom: 100px;
+    padding-bottom: 120px;
     color: white;
     font-family: $branding-font;
     
@@ -21,7 +21,7 @@ body {
 
         display: table;
         margin: auto;
-        margin-bottom: 50px;
+        margin-bottom: 90px;
         max-width: 1500px;
         width: 100%;
 
@@ -89,29 +89,30 @@ body {
         margin: auto;
         
         .jumbotron-title{
-            font-size: 1.8em;
-            font-weight: bold;
+            font-size: 2.2em;
+            font-weight: 900;
         }
         
         .carousel {
             padding-top: 80px;
             margin: auto;
 
-            width: 40%;
-            max-width: 30em;
+            width: 60%;
+            max-width: 40em;
             min-width: 10em;
         }
 
         p {
             max-width: 600px;
             margin: auto;
-            line-height: 150%;
+            line-height: 180%;
             margin-bottom: 40px;
+            font-weight: 500;
         }
         
         .cta {
             text-align: center;
-            padding-top: 50px;
+            padding-top: 70px;
         }
     }
 }
@@ -123,15 +124,15 @@ body {
     }
 
     display: inline-block;
-    padding: 10px;
+    padding: 15px;
     text-transform: uppercase;
     background-color: $button-green;
     border: 0px;
     border-radius: 3px;
 
     color: white;
-    font-family: $branding-font;
-    font-weight: bold;
+    font-family: $standard-font;
+    font-weight: 900;
     letter-spacing: 1.2px;
 }
 
