@@ -95,10 +95,15 @@ body {
         .carousel {
             padding-top: 80px;
             margin: auto;
+            visibility: hidden;
 
             width: 60%;
             max-width: 38em;
             min-width: 10em;
+        }
+
+        .slick-initialized {
+            visibility: visible;
         }
 
         p {

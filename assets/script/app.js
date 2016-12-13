@@ -1,11 +1,9 @@
 $(document).ready(function(){
 
-  $('.slider').slick({
-
+    $('.slider').slick({
         arrows: true,
         infinite: false,
         slidesToShow: 1,
         dots: false,
-   
-  });
+    });
 });
