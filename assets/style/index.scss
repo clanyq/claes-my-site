@@ -52,19 +52,19 @@
             padding-left: 0;
             border-top: 1px solid $feedborder;
             margin-top: 10px;
-            
+
             li {
                 list-decoration: none;
                 margin-top: 10px;
                 margin-bottom: 15px;
-               
+
                 a {
                     padding-bottom: 5px;
                     text-decoration: none;
                     display: block;
                     color: $feedtext;
                 }
-               
+
                 time {
                     font-weight: normal;
                     color: $greytext;

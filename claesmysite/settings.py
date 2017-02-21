@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'claesmysite',
     'compressor',
     'feedapp',
+    'easy_thumbnails',
 ]
 
 MIDDLEWARE = [
@@ -123,4 +124,9 @@ USE_TZ = True
 
 STATIC_URL = '/assets/'
 
+THUMBNAIL_ALIASES = {
+            '': {
+                'avatar': {'size': (50, 50), 'crop': True},
+            },
+}
 from .default_settings import *

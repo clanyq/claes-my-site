@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.dispatch import receiver
 from django.db.models.signals import pre_delete
+from django.contrib.auth.models import User
 
 from django.template.defaultfilters import slugify
 
@@ -12,6 +13,7 @@ class News(models.Model):
     body = models.TextField()
     pubdate = models.DateField(auto_now_add=True)
     slug = models.SlugField(unique=True, blank=True)
+    created_by = models.ForeignKey(User)
 
     def __str__(self):
         return(self.title)
